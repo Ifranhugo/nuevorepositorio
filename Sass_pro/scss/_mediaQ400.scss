@@ -1,0 +1,159 @@
+@media all and (max-width: 420px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 400vh 90vh 90vh 90vh 90vh 300vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4 "
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+ 
+  .title-ant {
+    letter-spacing: 5px;
+    font-size: 3.5vh;
+    text-align: center;
+  }
+  .text-ant {
+    font-size: 1.8vh;
+    margin-top: 2vh;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .inp-email {
+    margin-top: 6vh;
+    height: 3.6vh;
+    font-size: 3;
+    width: 42vh;
+  }
+  .dere {
+    font-size: 2vh;
+    line-height: 4vh;
+    letter-spacing: 1px;
+  }
+  .url-hij0 a {
+    font-size: 2vh;
+    align-items: center;
+  }
+  .des-port-2 {
+    margin-bottom: 14vh;
+    width: 43vh;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 412px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 360vh 90vh 90vh 90vh 90vh 230vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4 "
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  } .img-ofertas {
+      flex: row wrap;
+  }
+  .url-hijo {
+    text-align: center;
+  }
+}
+@media all and(max-width: 375px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 370vh 90vh 90vh 90vh 90vh 220vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4 "
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .url-hijo {
+    text-align: center;
+  }
+  .title-ant {
+    font-size: 2.7vh;
+  }
+  .text-ant {
+    font-size: 2vh;
+  }
+  .inp-email {
+    width: 180%;
+    height: 5vh;
+  }
+}
+
+@media all and(max-width: 366px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4 "
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .url-hijo {
+    text-align: center;
+  }
+  .title-ant {
+    font-size: 2.7vh;
+  }
+  .text-ant {
+    font-size: 2vh;
+  }
+  .inp-email {
+    width: 180%;
+    height: 5vh;
+  }
+}
+
+@media all and (max-width: 325px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 420vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4 "
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .url-hijo {
+    text-align: center;
+  }
+}

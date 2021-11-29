@@ -1,0 +1,94 @@
+.container_envio_entrega {
+  width: 100%;
+  height: 100%;
+}
+
+.contatiner_envio {
+  height: 7%;
+  width: 100%;
+}
+.title_sec_envio {
+  margin-left: 2vh;
+  font-size: 180%;
+  margin: 2%;
+}
+.text_input_envio {
+  font-size: 150%;
+}
+.input__envio {
+  margin: 2vh;
+}
+//////
+.container_entrega {
+  height: 100%;
+}
+.title_sec_entrega {
+  font-size: 180%;
+  margin: 2%;
+}
+.contenedor_de_input_entrega {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.form_entrega {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 70%;
+  text-align: start;
+
+  margin-left: 2vh;
+}
+label {
+  margin: 2vh;
+}
+.inputs_de_entregas {
+  width: 30%;
+  height: 30%;
+  border: none;
+  border-bottom: 2px solid rgb(43, 54, 150);
+  outline: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: transparent;
+  font-size: 3vh;
+}
+.inputs_de_entregas :hover {
+  background: rgb(150, 89, 89);
+}
+.textarea {
+  width: 60%;
+  height: 25%;
+  border: none;
+  font-size: 3vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-bottom: 2px solid rgb(43, 54, 150);
+  outline: none;
+}
+.Detextarea {
+  font-size: 3vh;
+}
+.label-entregas {
+  font-size: 130%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  padding-right: 1vh;
+}
+.labet-text {
+  font-size: 130%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.ciudad_1 {
+  display: inline-block;
+}
+
+.ciudad__div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+}

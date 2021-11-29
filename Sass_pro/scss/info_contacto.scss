@@ -1,0 +1,49 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Noto Serif Display", serif;
+}
+
+a {
+  text-decoration: none;
+}
+.body_formulario.body_cambio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40% 10% 30% 40% 27%;
+  grid-template-areas:
+    "sector1Datos      sector1Datos" "fomu_contacto   fomu_contacto"
+    "formu_envio  formu_envio"
+    "formu_pago   formu_pago"
+    "footer    footer";
+}
+.body_formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 60% 40% 27%;
+  grid-template-areas:
+    "fomu_contacto   fomu_contacto"
+    "formu_envio  formu_envio"
+    "formu_pago   formu_pago"
+    "footer    footer";
+}
+
+.sector1Datos {
+  grid-area: sector1Datos;
+}
+.fomu_contacto {
+  grid-area: fomu_contacto;
+  box-sizing: border-box;
+}
+.formu_envio {
+  grid-area: formu_envio;
+}
+.formu_pago {
+  grid-area: formu_pago;
+}
+.footer {
+  grid-area: footer;
+}

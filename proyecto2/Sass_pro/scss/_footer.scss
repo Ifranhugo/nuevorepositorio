@@ -1,0 +1,76 @@
+.footer {
+  grid-area: footer;
+  overflow: hidden;
+  background: rgb(187, 187, 187);
+}
+
+.conteiner-redes {
+  display: flex;
+  justify-content: center;
+  padding-left: 4vh;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 8vh;
+  width: 100%;
+}
+
+.redes i {
+  font-size: 6vh;
+  align-items: center;
+}
+
+.container-list {
+  display: flex;
+  flex: column wrap;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.lista-footer {
+  list-style: none;
+  font-size: 3vh;
+  line-height: 6.5vh;
+}
+
+.elem-list a {
+  font-size: 2.7vh;
+  color: #000;
+  text-align: center;
+}
+
+.fab {
+  font-size: 2.8vh;
+  margin-right: 2vh;
+}
+
+.fas {
+  font-size: 2.8vh;
+  margin-right: 2vh;
+}
+
+.derechos-footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  justify-content: space-around;
+}
+
+.dere {
+  font-size: 2.4vh;
+  letter-spacing: 1px;
+}
+
+.url-pag {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8vh;
+  align-items: center;
+}
+
+.url-hijo {
+  font-size: 2.7vh;
+  text-decoration: none;
+  color: #000;
+  line-height: 5vh;
+}

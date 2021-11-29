@@ -1,0 +1,53 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Noto Serif Display", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body_formulario {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 30% 60% 40% 30%;
+      grid-template-rows: 30% 60% 40% 30%;
+      grid-template-areas: "fomu_contacto   fomu_contacto" "formu_envio  formu_envio" "formu_pago   formu_pago" "footer    footer";
+}
+
+.fomu_contacto {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: fomu_contacto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.formu_envio {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: formu_envio;
+}
+
+.formu_pago {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: formu_pago;
+}
+
+.footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+/*# sourceMappingURL=info_contacto.css.map */

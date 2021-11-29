@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,200&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./Sass_pro/scss/practica.css">
+  <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/67b1745821.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body class="body_product" id="body_productID">
+  <header>
+
+    <section class="menu">
+      <div class="logo">RAPSARVIA</div>
+      <section class="cont-enla">
+        <ul>
+          <li><a href="index.html"> <span class="off">INICIO</span></a></li>
+          <li><a href="novedades.html"> <span class="off">NOVEDADES</span></a></li>
+          <li><a href="productos.html" class="productos"><span class="off"> PRODUCTOS</span></a></li>
+          <li class="off-1"><a href="accesorios.html"><span class="off-1"> ACCESORIOS</span></a></li>
+          <li><button class="button_carrr" id="button_carrrID"><i class="fas fa-shopping-bag "></i></li>
+          </button>
+
+          <li><svg class="lupa" width="25" height="21" viewBox="0 0 65 61" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25.4061 0.5C11.7233 0.5 0.628906 10.9418 0.628906 23.8198C0.628906 36.6978 11.7233 47.1395 25.4062 47.1395C30.6678 47.1395 35.5474 45.5949 39.5584 42.9639L39.5613 42.9611L57.9372 60.2562C58.2782 60.5771 58.8205 60.5854 59.1703 60.2562L64.1229 55.595C64.4639 55.274 64.4464 54.7418 64.12 54.4345L45.7467 37.1422C48.5422 33.3644 50.1834 28.7717 50.1834 23.8198C50.1834 10.9418 39.089 0.5 25.4061 0.5ZM25.4061 41.6525C14.9413 41.6525 6.45877 33.6689 6.45877 23.8198C6.45877 13.9706 14.9414 5.98702 25.4061 5.98702C35.8708 5.98702 44.3534 13.9706 44.3534 23.8198C44.3534 33.6689 35.8709 41.6525 25.4061 41.6525Z"
+                fill="black" />
+            </svg></li>
+        </ul>
+      </section>
+    </section>
+  </header>
+
+  <section class="presentacion_productos">
+    <div class="alertCarr" id="alertCarrID" role="alert">
+      <h4> A Sumado un producto al carrito!</h4>
+    </div>
+    <div class="alertRemove" id="alertRemoveID" role="alert">
+      <h4> A removido un producto del carrito!</h4>
+    </div>
+    <div class="title__img_cont">
+      <h1 class="inside_h1">PRODUCTOS</h1>
+    </div>
+    <div>
+
+
+      <button id="efecto_buttom" href="" class="button_opciones">FILTROS
+        <i class="fas fa-filter"></i>
+      </button>
+      <div class="menu_opciones">
+        <div class="opciones_de_productos  " id="opciones_en_js">
+          <div class="container_opciones_menu">
+            <h3 class="title_menu_opciones-1"> Categorias</h3>
+            <ul class="categorias_opciones">
+              <li class="list_opciones"><a href="#" class="list_opciones-1">conjuntos</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Pantalones</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Pollera</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Vestidos</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Remeras</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Zapatos</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Pollera</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Vestidos</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Remeras</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones-1">Zapatos</a> </li>
+            </ul>
+            <ul class="color_opciones">
+              <h3 class="title_menu_opciones"> Colores</h3>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+            </ul>
+            <ul class="color_opciones-1">
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">colores</a>
+                <div class="cuadrados_colores"></div>
+              </li>
+            </ul>
+            <ul class="talle_opciones">
+              <h3 class="title_menu_opciones"> Talle</h3>
+              <li class="list_opciones"><a href="#" class="list_opciones">36</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">38</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">40</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">42</a> </li>
+
+              <li class="list_opciones"><a href="#" class="list_opciones">L</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">M</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">S</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">UNICO</a> </li>
+              <li class="list_opciones"><a href="#" class="list_opciones">XL</a> </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="img__product">
+
+    <section class="container-product">
+
+      <div class="foto_product" id="foto_productID">
+        <a href="./muestra_producto.html">
+
+          <img class="foto-galeria-1 a_fotogalery" src="./imagenes-proyecto/4seccion-2.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> CAMIZA GINZA</h3>
+          <h4 class="precio_original" id="title_galeriaID">$4,850.00</h4>
+          <del class="precio_rebaja">$4,000</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria11.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> BUZO DESTINI</h3>
+          <h4 class="precio_original" id="title_galeriaID">$3,900.00</h4>
+          <del class="precio_rebaja">$5,070.00</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria20.jpg" alt=""></a>
+        <div class="carrto__comprar " id="carrto__comprarID"><button class="buttom__galery"
+            id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria">FALDA GREEK </h3>
+          <h4 class="precio_original" id="title_galeriaID">$3,200.00</h4>
+          <del class="precio_rebaja">$3,100.00</del>
+          <div class="off_porciento">
+            <p>- 50%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery " src="./imagen-productos/galeria_25.png" alt=""></a>
+        <div class="carrto__comprar " id="carrto__comprarID"><button class="buttom__galery"
+            id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> FALDA TEJIDA</h3>
+          <h4 class="precio_original" id="title_galeriaID">$2,450.00</h4>
+          <del class="precio_rebaja">$408,33</del>
+          <div class="off_porciento">
+            <p>- 30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagenes-muestra/muestra_26_1.jpeg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> FALDA MIDI SATIN</h3>
+          <h4 class="precio_original" id="title_galeriaID">$3,940.00</h4>
+          <del class="precio_rebaja">$5.200</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product  a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_29.jpeg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> CHALECO SUMMER</h3>
+          <h4 class="precio_original" id="title_galeriaID">$14,500.00</h4>
+          <del class="precio_rebaja">$1,570.00</del>
+          <div class="off_porciento">
+            <p>-50%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_30.jpeg" alt="">
+          <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery"
+              id="buttom__galeryID">agregar
+              al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+          <div class="info-galeria">
+            <h3 class="title_galeria"> CAMISA MYKONOS MOSTAZA</h3>
+            <h4 class="precio_original" id="title_galeriaID">$3,100.00</h4>
+            <del class="precio_rebaja">$1,450.00</del>
+            <div class="off_porciento">
+              <p>-30%</p>
+            </div>
+          </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_31.jpeg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> CAMISA VESTIDO TROPICAL
+          </h3>
+          <h4 class="precio_original" id="title_galeriaID">$6,000.00</h4>
+          <del class="precio_rebaja">$2,390.00</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_32.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> VESTIDO ATICO ZEBRA</h3>
+          <h4 class="precio_original" id="title_galeriaID">$6,800.00</h4>
+          <del class="precio_rebaja">$940.00</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product a_fotogalery" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_33.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria"> VESTIDO ATICO</h3>
+          <h4 class="precio_original" id="title_galeriaID">$9,500.00</h4>
+          <del class="precio_rebaja">$15,000.00</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_34.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria-">
+          <h3 class="title_galeria"> JEAN PATCHES</h3>
+          <h4 class="precio_original" id="title_galeriaID">$6,900.00</h4>
+          <del class="precio_rebaja">$4,500.00</del>
+          <div class="off_porciento">
+            <p>-50%</p>
+          </div>
+        </div>
+      </div>
+      <div class="foto_product" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="./imagen-productos/galeria_35.jpg" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria">JOGGIN LOVE BLANCO</h3>
+          <h4 class="precio_original" id="title_galeriaID">$3,375.00</h4>
+          <del class="precio_rebaja">$4.500</del>
+          <div class="off_porciento">
+            <p>-50%</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </section>
+  <footer class=" footer">
+    <div class="conteiner-redes">
+      <a class="redes"><i class="fab fa-facebook-square red"></i></a>
+      <a class="redes"><i class="fab fa-instagram red"></i></a>
+    </div>>
+    <div class="container-list">
+
+
+      <ul class="lista-footer">
+        <li class="elem-list"><a href=""><i class="fab fa-whatsapp"></i> 5491134522737</a></li>
+        <li class="elem-list"><a href=""><i class="fas fa-phone-alt"></i> +54 9 11 696998723</li></a>
+        <li class="elem-list"><a href=""><i class="fas fa-envelope"></i> luzbelito@gmail.com</a></li>
+        <li class="elem-list"><a href=""><img class="fas fa-envelope" src="imagenes-proyecto/maps.svg" alt="">
+            AV Belgrano, calle jose ingenieros 2711 PVBS
+          </a></li>
+      </ul>
+
+    </div>
+    <div class="derechos-footer">
+      <div class="dere">© Copyright RAPSARVIA OFFICIAL - 2021</div>
+      <div class="dere">creado con &ifrtecnologia&</div>
+
+      <div class="dere">Todos los derechos reservados. </div>
+    </div>
+
+    <div class="url-pag">
+      <h4><a class="url-hijo link-hij" target="_blank"
+          href="https://www.facebook.com/emanuelhugo.ifran">https://www.facebook.com/emanuelhugo.ifran </a></h4>
+      <h4 class="url-hijo  ">Defensa de las y los consumidores. Para reclamos ingrese<a class="url-hijo" href="#">
+          aquí</a></h4>
+    </div>
+
+  </footer>
+  <div class="seccionCar" id="seccionCarID">
+    <div class="contaner_con_modal"><button class="button_cerrar_modal" id="button_cerrar_modalID">X</button>
+      <div class="containe_carrito_modal" id="containeModalID">
+        <table class="table_carr_modal">
+          <thead class="thead_carr_modal">
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+
+              <th>Precio</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="Tbody" id="TbodyID">
+          </tbody>
+        </table>
+        <br></br>
+        <div class="TotalCarrito">
+          <div class="col">
+            <h3 class="h3Total" id="h3TotalID">Total : 0</h3>
+          </div>
+          <div class="ConButtonComprar">
+            <button class="ButtonComCarr" id="ButtonComCarrID" value="">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="producto.js"></script>
+</body>
+
+</html>

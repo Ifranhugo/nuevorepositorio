@@ -1,0 +1,136 @@
+.body_novedad {
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 130vh 200vh 180vh 180vh 250vh 150vh 80vh;
+  grid-template-areas:
+    "separacion_novedad  separacion_novedad "
+    "ropa-negra  ropa-negra-text"
+    "foto_section-1   foto_section-2"
+    "ropa-colores  ropa-colores-text"
+    "img__separatoria-3   img__separatoria-3"
+    "img__product-3  img__product-3"
+    "footer  footer";
+}
+.separacion_novedad {
+  grid-area: separacion_novedad;
+  margin-top: 16vh;
+  width: 100%;
+  background: url(../../imagenes-novedades/lanzamiento-desktop-1.jpg);
+  background-size: cover;
+  margin-bottom: 15vh;
+}
+.img_separatoria img {
+  align-items: center;
+}
+.container-product-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.foto_section-1 {
+  grid-area: foto_section-1;
+  margin-bottom: 15vh;
+  width: 100%;
+  overflow: hidden;
+
+  background: url(../../imagenes-novedades/lanzamiento-desktop-7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.foto_section-2 {
+  margin-bottom: 12vh;
+  grid-area: foto_section-2;
+  width: 100%;
+
+  overflow: hidden;
+  background: url(../../imagenes-novedades/lanzamiento-desktop-4.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+.ropa-negra {
+  grid-area: ropa-negra;
+  margin-bottom: 15vh;
+  background: url(../../imagenes-novedades/novedades-ropa-negra.jpg);
+  overflow: hidden;
+
+  background-size: cover;
+}
+.ropa-negra-text {
+  width: 100%;
+  grid-area: ropa-negra-text;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 254, 254);
+}
+.h3-text-negra {
+  font-size: 5vh;
+  margin: 2%;
+  font-family: "Montserrat", sans-serif;
+}
+.p-text-negra {
+  font-size: 3vh;
+  font-family: "Montserrat", sans-serif;
+}
+.ropa-colores {
+  grid-area: ropa-colores;
+  background: url(../../imagenes-novedades/novedades-ropa-colores.jpg);
+  background-size: cover;
+}
+.ropa-colores-text {
+  grid-area: ropa-colores-text;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 254, 254);
+}
+
+.img__product-2 {
+  grid-area: img__product-2;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+}
+.container-product-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.img__separatoria-3 {
+  grid-area: img__separatoria-3;
+  background: url(../../imagenes-novedades/lanzamiento-desktop-8.jpg);
+  background-size: cover;
+}
+.img__product-3 {
+  grid-area: img__product-3;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+}
+.container-product-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.container-product-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.foto_product-1 {
+  height: fit-content;
+  text-align: center;
+  box-shadow: 3px 3px 5px #e5e7e9;
+  width: 30%;
+}

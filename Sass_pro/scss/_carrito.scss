@@ -1,0 +1,67 @@
+.body_carr {
+  display: grid;
+  grid-template-rows: 15vh 110vh 60vh 70vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "separador   separador"
+    "tablaCarrito   tablaCarrito"
+    "suma_de_precios   suma_de_precios"
+    "footer    footer";
+}
+.separador {
+  grid-area: separador;
+}
+.tablaCarrito {
+  grid-area: tablaCarrito;
+}
+.suma_de_precios {
+  grid-area: suma_de_precios;
+  background-color: #646464;
+}
+
+.container_carrito {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #bfbfbf;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.table_carr {
+  margin-top: 10vh;
+  width: 98%;
+  height: 40%;
+  border: 1px solid #bfbfbf;
+  text-align: center;
+}
+.table_carr tr :nth-child(1) {
+  width: 20vh;
+}
+.table_carr tr > th {
+  font-size: 2vh;
+  width: 5vh;
+  height: 5vh;
+  border-bottom: 2px solid blueviolet;
+}
+.titleCarrito {
+  font-size: 7vh;
+  margin: 2vh;
+  margin-left: 12vh;
+}
+.button_eliminar {
+  height: 2vh;
+  border: none;
+  background: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 2vh;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 900;
+}
+.table_carr td :nth-last-child() {
+  width: 2vh;
+}
+.td_buttom {
+  width: 1vh;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACnB,SAAS,EAAE,mBAAmB;CAC/B;;AACD,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;CACpB",
+    "sources": [
+        "con-colecc.scss"
+    ],
+    "names": [],
+    "file": "con-colecc.css"
+}

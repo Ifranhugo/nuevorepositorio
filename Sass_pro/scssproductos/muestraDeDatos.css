@@ -1,0 +1,121 @@
+.bodymuestraDatos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: 110vh 100vh;
+      grid-template-rows: 110vh 100vh;
+      grid-template-areas: "sector1Datos   sector1Datos" "sector2Datos  sector2Datos";
+}
+
+.sector2Datos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sector2Datos;
+}
+
+.sector1Datos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sector1Datos;
+}
+
+.container_sectionDatos1 {
+  border: medium solid black;
+  width: 90%;
+  margin: auto;
+  margin-top: 8%;
+  height: 70%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+}
+
+.container2_sectionDatos1 {
+  border: medium solid black;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  margin: 15px;
+}
+
+.container3_sectionDatos1 {
+  border: medium solid black;
+  margin: 15px;
+}
+
+.container4_sectionDatos1 {
+  border: medium solid black;
+  margin: 15px;
+}
+
+.con_decartaDedatos {
+  height: 35%;
+  border-bottom: 1px solid black;
+}
+
+.title_decartaDedatos {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.carta_deDatos2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65%;
+}
+
+.carta_deDatos1 {
+  border: 1px solid black;
+}
+
+.con_decartaDePago {
+  height: 7%;
+}
+
+.title_decartaDePago {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.tablaDePago {
+  height: 65%;
+  margin: auto;
+}
+
+.tablaDePago,
+td {
+  font-size: 2.5vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.con_decartaDeEntrega {
+  height: 10%;
+  border-bottom: 1px solid black;
+}
+
+.title_decartaDeEntrega {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.tablaDeEntrega {
+  margin: auto;
+}
+/*# sourceMappingURL=muestraDeDatos.css.map */

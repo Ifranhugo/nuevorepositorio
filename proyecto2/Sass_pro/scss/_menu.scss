@@ -1,0 +1,83 @@
+.menu {
+  z-index: 10;
+  background: rgb(255, 255, 255);
+  height: 13vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0vh;
+  left: 0;
+  font-family: "Cinzel", serif;
+}
+
+.cont-enla ul {
+  display: flex;
+  align-items: flex-end;
+}
+
+.cont-enla ul li {
+  list-style: none;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  animation-duration: 2s;
+  animation-delay: 0.5;
+  text-decoration: none;
+}
+
+.cont-enla ul li a {
+  list-style: none;
+}
+.cont-enla ul li a > span {
+  font-size: 3vh;
+  color: #000;
+  list-style: none;
+}
+
+.cont-enla ul :hover {
+  border-bottom: 2px #000;
+  font-size: 3.5vh;
+  transition: 0.1s;
+}
+.fa-shopping-bag :hover {
+  font-size: 4vh;
+}
+.fa-shopping-bag {
+  text-align: center;
+  margin-left: 2vh;
+  padding-left: -4vh;
+  color: #000;
+  height: 20px;
+}
+.lupa :hover {
+  cursor: pointer;
+  color: #fff;
+}
+.lupa {
+  font-size: 6vh;
+  margin-right: 3vh;
+}
+.logo {
+  font-size: 6vh;
+  color: #000;
+  letter-spacing: 0.1vh;
+  padding-left: 10vh;
+  font-family: "Roboto", sans-serif;
+  flex: 2 1 40%;
+  animation-name: prueba;
+  animation-iteration-count: 1;
+  font-family: "Cinzel", serif;
+  animation-duration: 2s;
+  animation-delay: 0.5;
+}
+
+@keyframes prueba {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
