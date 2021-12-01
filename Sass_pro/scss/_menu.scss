@@ -1,7 +1,7 @@
 .menu {
   z-index: 10;
   background: rgb(255, 255, 255);
-  height: 13vh;
+  height: 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -32,20 +32,20 @@
   list-style: none;
 }
 .cont-enla ul li a > span {
-  font-size: 2.7vh;
+  font-size: 120%;
   font-family: "Mulish", sans-serif;
   color: var(--letra-negra);
   list-style: none;
 }
-
+.menuHamLi {
+  display: none;
+}
 .cont-enla ul :hover {
   border-bottom: 2px #000;
-  font-size: 3.5vh;
+  font-size: 115%;
   transition: 0.1s;
 }
-.fa-shopping-bag :hover {
-  font-size: 4vh;
-}
+
 .fa-shopping-bag {
   text-align: center;
   margin-left: 2vh;
@@ -62,7 +62,7 @@
   margin-right: 3vh;
 }
 .logo {
-  font-size: 6vh;
+  font-size: 150%;
   color: #000;
   letter-spacing: 0.1vh;
   padding-left: 10vh;

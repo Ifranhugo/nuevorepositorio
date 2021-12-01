@@ -13,6 +13,7 @@ a {
 }
 
 .body__practica {
+  overflow: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -26,5 +27,6 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: contain_title_ofert;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=body.css.map */

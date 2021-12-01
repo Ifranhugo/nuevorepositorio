@@ -2,7 +2,7 @@
 .menu {
   z-index: 10;
   background: white;
-  height: 13vh;
+  height: 10%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,21 +46,21 @@
 }
 
 .cont-enla ul li a > span {
-  font-size: 2.7vh;
+  font-size: 120%;
   font-family: "Mulish", sans-serif;
   color: var(--letra-negra);
   list-style: none;
 }
 
-.cont-enla ul :hover {
-  border-bottom: 2px #000;
-  font-size: 3.5vh;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+.menuHamLi {
+  display: none;
 }
 
-.fa-shopping-bag :hover {
-  font-size: 4vh;
+.cont-enla ul :hover {
+  border-bottom: 2px #000;
+  font-size: 115%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .fa-shopping-bag {
@@ -82,7 +82,7 @@
 }
 
 .logo {
-  font-size: 6vh;
+  font-size: 150%;
   color: #000;
   letter-spacing: 0.1vh;
   padding-left: 10vh;
@@ -134,6 +134,7 @@ a {
 }
 
 .body__practica {
+  overflow: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -147,6 +148,7 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: contain_title_ofert;
+  overflow-x: hidden;
 }
 
 .portada {
@@ -703,580 +705,6 @@ a {
 
 .url-hijo {
   font-family: "Mulish", sans-serif;
-}
-
-@media all and (max-width: 780px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 90vh 90vh 300vh 90vh 90vh 90vh 90vh 210vh 50vh 90vh;
-        grid-template-rows: 90vh 90vh 300vh 90vh 90vh 90vh 90vh 210vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4" " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    height: 7%;
-    font-size: 2vh;
-  }
-  .cont-enla ul li {
-    padding: 0;
-  }
-  .logo {
-    font-size: 3.8vh;
-    -webkit-box-flex: 2;
-        -ms-flex: 2 1 100%;
-            flex: 2 1 100%;
-  }
-  .off-1 {
-    display: none;
-  }
-  .lupa {
-    font-size: 2vh;
-    text-align: center;
-  }
-  .bu-principal-1 {
-    width: 28vh;
-    height: 7vh;
-    margin-left: 0%;
-  }
-  .bu-principal {
-    width: 28vh;
-    margin-left: 0;
-    height: 7vh;
-  }
-  .bu-prin-1 {
-    font-size: 2.6vh;
-  }
-  .bu-prin {
-    font-size: 2.6vh;
-  }
-  .des-port-2 {
-    margin-left: 25%;
-  }
-  .des-port {
-    margin-left: 30%;
-  }
-  .cont-publicidad-4 {
-    background-size: 120%;
-  }
-  .ant-foot {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: ant-foot;
-    background: #fff;
-  }
-  .container-foot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .title-ant {
-    letter-spacing: 5px;
-    font-size: 5vh;
-    text-align: center;
-  }
-  .text-ant {
-    font-size: 2.6vh;
-    margin-top: 2vh;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  .form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .inp-email {
-    margin-top: 6vh;
-    height: 5vh;
-    font-size: 3;
-    width: 50vh;
-  }
-  .footer {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: footer;
-    overflow: hidden;
-    background: #c5edff;
-  }
-  .redes i {
-    font-size: 4vh;
-  }
-  .container-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: column;
-        -ms-flex: column wrap;
-            flex: column wrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    margin-top: 3vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .lista-footer {
-    list-style: none;
-    font-size: 2.5vh;
-    line-height: 6.5vh;
-    text-align: center;
-  }
-  .elem-list a {
-    font-size: 2.2vh;
-    color: #000;
-  }
-  .fab {
-    font-size: 2.8vh;
-    margin-right: 2vh;
-  }
-  .fas {
-    font-size: 2.8vh;
-    margin-right: 2vh;
-  }
-  .derechos-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 10vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .dere {
-    font-size: 2.2vh;
-    line-height: 4vh;
-    letter-spacing: 1px;
-  }
-  .url-hijo {
-    font-size: 2vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .link-hij {
-    font-size: 2.5;
-  }
-  .ofert-img {
-    text-align: center;
-  }
-  .img-ofertas {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media all and (max-width: 700px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4" " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .text-ant {
-    font-size: 2vh;
-    margin-top: 2vh;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  .derechos-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 10vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .dere {
-    font-size: 2.2vh;
-    line-height: 4vh;
-    letter-spacing: 1px;
-  }
-  .img-sec {
-    width: 120%;
-  }
-}
-
-@media all and (max-width: 542px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 380vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 380vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4" " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    height: 7%;
-    font-size: 2vh;
-  }
-  .cont-enla ul li {
-    padding: 0;
-  }
-  .logo {
-    font-size: 3.8vh;
-    -webkit-box-flex: 2;
-        -ms-flex: 2 1 100%;
-            flex: 2 1 100%;
-  }
-  .off-1 {
-    display: none;
-  }
-  .lupa {
-    font-size: 2vh;
-    text-align: center;
-  }
-  .bu-principal-1 {
-    width: 28vh;
-    height: 7vh;
-    margin-left: 0%;
-  }
-  .bu-principal {
-    width: 28vh;
-    margin-left: 0;
-    height: 7vh;
-  }
-  .bu-prin-1 {
-    font-size: 2.6vh;
-  }
-  .bu-prin {
-    font-size: 2.6vh;
-  }
-  .des-port-2 {
-    margin-left: 25%;
-  }
-  .des-port {
-    margin-left: 30%;
-  }
-  .cont-publicidad-4 {
-    background-size: 120%;
-  }
-  .ant-foot {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: ant-foot;
-    background: #fff;
-  }
-  .container-foot {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .title-ant {
-    letter-spacing: 5px;
-    font-size: 5vh;
-    text-align: center;
-  }
-  .text-ant {
-    font-size: 2.6vh;
-    margin-top: 2vh;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  .form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .inp-email {
-    margin-top: 6vh;
-    height: 5vh;
-    font-size: 3;
-    width: 50vh;
-  }
-  .footer {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: footer;
-    overflow: hidden;
-    background: #c5edff;
-  }
-  .redes i {
-    font-size: 4vh;
-  }
-  .container-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: column;
-        -ms-flex: column wrap;
-            flex: column wrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    margin-top: 3vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .lista-footer {
-    list-style: none;
-    font-size: 2.5vh;
-    line-height: 6.5vh;
-    text-align: center;
-  }
-  .elem-list a {
-    font-size: 2.2vh;
-    color: #000;
-  }
-  .fab {
-    font-size: 2.8vh;
-    margin-right: 2vh;
-  }
-  .fas {
-    font-size: 2.8vh;
-    margin-right: 2vh;
-  }
-  .derechos-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 10vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .dere {
-    font-size: 2.2vh;
-    line-height: 4vh;
-    letter-spacing: 1px;
-  }
-  .url-hijo {
-    font-size: 2vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .link-hij {
-    font-size: 2.5;
-  }
-}
-
-@media all and (max-width: 420px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 400vh 90vh 90vh 90vh 90vh 300vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 400vh 90vh 90vh 90vh 90vh 300vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4 " " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .title-ant {
-    letter-spacing: 5px;
-    font-size: 3.5vh;
-    text-align: center;
-  }
-  .text-ant {
-    font-size: 1.8vh;
-    margin-top: 2vh;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  .inp-email {
-    margin-top: 6vh;
-    height: 3.6vh;
-    font-size: 3;
-    width: 42vh;
-  }
-  .dere {
-    font-size: 2vh;
-    line-height: 4vh;
-    letter-spacing: 1px;
-  }
-  .url-hij0 a {
-    font-size: 2vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .des-port-2 {
-    margin-bottom: 14vh;
-    width: 43vh;
-    text-align: center;
-  }
-}
-
-@media all and (max-width: 412px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 360vh 90vh 90vh 90vh 90vh 230vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 360vh 90vh 90vh 90vh 90vh 230vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4 " " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .img-ofertas {
-    -webkit-box-flex: row;
-        -ms-flex: row wrap;
-            flex: row wrap;
-  }
-  .url-hijo {
-    text-align: center;
-  }
-}
-
-@media all and (max-width: 375px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 370vh 90vh 90vh 90vh 90vh 220vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 370vh 90vh 90vh 90vh 90vh 220vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4 " " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .url-hijo {
-    text-align: center;
-  }
-  .title-ant {
-    font-size: 2.7vh;
-  }
-  .text-ant {
-    font-size: 2vh;
-  }
-  .inp-email {
-    width: 180%;
-    height: 5vh;
-  }
-}
-
-@media all and (max-width: 366px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4 " " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .url-hijo {
-    text-align: center;
-  }
-  .title-ant {
-    font-size: 2.7vh;
-  }
-  .text-ant {
-    font-size: 2vh;
-  }
-  .inp-email {
-    width: 180%;
-    height: 5vh;
-  }
-}
-
-@media all and (max-width: 325px) {
-  .body__practica {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 110vh 110vh 420vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
-        grid-template-rows: 110vh 110vh 420vh 90vh 90vh 90vh 90vh 250vh 50vh 90vh;
-        grid-template-areas: "portada portada" "portada-2 portada-2" "novedades novedades" "cont-publicidad-1 cont-publicidad-1" " cont-publicidad-2 cont-publicidad-2" "cont-publicidad-4 cont-publicidad-4 " " cont-publicidad-3 cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
-  }
-  .url-hijo {
-    text-align: center;
-  }
 }
 
 * {
@@ -3291,4 +2719,120 @@ th {
   font-size: 2.5vh;
   padding: 5px;
 }
+
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .cont-enla ul li a > span {
+    display: none;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .menu {
+    overflow: hidden;
+    display: block;
+  }
+  .cont-enla ul li a > span {
+    display: none;
+  }
+  .logo {
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    height: fit-content;
+    width: 100%;
+  }
+  .menuHamLi {
+    display: block;
+  }
+  .cont-enla ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 6vh;
+  }
+  .cont-enla ul li a {
+    text-align: center;
+  }
+  .lupa {
+    display: none;
+    z-index: 1000;
+  }
+  .fa-shopping-bag {
+    font-size: 3vh;
+  }
+  .body__practica {
+    display: -ms-grid;
+    display: grid;
+    overflow-x: hidden;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 115vh 135vh 90vh 90vh 120vh 50vh 80vh;
+    grid-template-rows: 35% 35% 12% 40% 40% 50% 22% 32%;
+        grid-template-areas: "portada portada" "portada-2 portada-2" "contain_title_ofert  contain_title_ofert" "cont-publicidad-1    cont-publicidad-2" "cont-publicidad-4    cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
+  }
+  .portada {
+    overflow-x: hidden;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contain_ppt {
+    border: 1px solid red;
+  }
+  .bu-prin {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 0;
+    margin: 0%;
+    padding: 0%;
+    left: 0%;
+    right: 0;
+    text-align: center;
+    position: relative;
+    font-size: 3.5vh;
+    font-family: "Mulish", sans-serif;
+  }
+  .des-port {
+    margin-bottom: 0;
+    width: 43vh;
+    text-align: center;
+    margin-left: 0%;
+    font-family: "Mulish", sans-serif;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 and high pixel ratio devices ----------- */
 /*# sourceMappingURL=practica.css.map */
