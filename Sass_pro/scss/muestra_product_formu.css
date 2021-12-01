@@ -1,0 +1,268 @@
+.container_product_formu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container__product_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.muestra_product_img {
+  display: inline-block;
+  padding: 4vh;
+}
+
+.title_formu_info {
+  font-size: 4vh;
+  display: inline-block;
+  margin-left: 0vh;
+  margin: 3.5vh;
+}
+
+.off_porciento {
+  display: inline-block;
+}
+
+.precio_original {
+  font-size: 4.5vh;
+}
+
+.color_formu_ {
+  font-size: 4vh;
+  display: inline-block;
+  margin: 3vh;
+}
+
+.cuadrados_colores_formu {
+  display: inline-block;
+  height: 20px;
+  margin-top: 5vh;
+  margin-left: 2vh;
+  width: 20px;
+}
+
+.amarillo_1 {
+  background: #f00000;
+}
+
+.azul_1 {
+  background: rgba(47, 0, 255, 0.067);
+}
+
+.negro_1 {
+  background-color: #000;
+}
+
+.talles_formul_muestra {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ttitle_talles_formu {
+  font-size: 4vh;
+  text-align: center;
+}
+
+.cuadra_talles_formu {
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  border-bottom: medium solid var(--rosa-fuerte);
+  border-left: medium solid var(--rosa-fuerte);
+}
+
+.agre_bolsa_formu {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buTTOM_bolsa {
+  height: 8vh;
+  width: 60vh;
+  font-size: 4vh;
+  background: var(--rosa-fuerte);
+  border: 3px solid var(--rosa-fuerte);
+  -webkit-border-radius: 10vh;
+}
+
+.text_carrito {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vh;
+}
+
+.envio_bolsa_formu {
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.buttom_envios_formu {
+  font-size: 4vh;
+  font-weight: 5 vh;
+  margin-left: 3vh;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 2px solid var(--rosa-fuerte);
+}
+
+.devoluciones_formu_container {
+  margin: 3vh;
+}
+
+.title_devoluciones_formu {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.3vh;
+  padding-top: 6%;
+}
+
+.text_devoluciones_formu {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 6%;
+  font-size: 2.7vh;
+}
+
+.envios_envios_formu {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.envios_formu_container {
+  margin: 3vh;
+}
+
+.title_envioss_formu {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.4vh;
+  padding-top: 3%;
+}
+
+.text_envios_formu {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 4%;
+  font-size: 2.7vh;
+}
+
+.info_formul {
+  height: 50vh;
+}
+
+.info_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.title_info_formu {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.3vh;
+  padding-top: 10vh;
+  margin: 3%;
+}
+
+.text_info_formu {
+  font-size: 2.5vh;
+  font-family: "Montserrat", sans-serif;
+  margin: 2.7vh;
+}
+
+.title_relacionados_muestra {
+  font-size: 5vh;
+  margin-left: 5vh;
+  color: var(--rosa-fuerte);
+  padding-top: 20vh;
+  padding-bottom: 7vh;
+}
+
+.container_realcionados_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.info-galeria_relacionados {
+  display: block;
+  text-align: center;
+}
+/*# sourceMappingURL=muestra_product_formu.css.map */

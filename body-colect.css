@@ -1,0 +1,31 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-colect {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 40vh 100vh 80vh;
+      grid-template-rows: 40vh 100vh 80vh;
+      grid-template-areas: "title-prin  title-prin" "container-coleccion container-coleccion";
+}
+
+.title-prin {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title-prin;
+  position: relative;
+}
+/*# sourceMappingURL=body-colect.css.map */

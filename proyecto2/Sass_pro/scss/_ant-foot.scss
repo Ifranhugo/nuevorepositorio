@@ -1,0 +1,58 @@
+.ant-foot {
+  grid-area: ant-foot;
+  background: #fff;
+}
+
+.container-foot {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title-ant {
+  letter-spacing: 5px;
+  font-size: 6vh;
+}
+
+.text-ant {
+  font-size: 2.6vh;
+  margin-top: 2vh;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inp-email {
+  margin-top: 6vh;
+  height: 5vh;
+  font-size: 3;
+  width: 130vh;
+}
+
+.inp-email :focus {
+  background: #8adaff;
+}
+
+.but-inp {
+  margin-top: 4vh;
+  text-decoration: none;
+  width: 12vh;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #a80f96;
+  background: #fff;
+  position: relative;
+  height: 5vh;
+}
+
+.but-inp :hover {
+  border-bottom: 30px solid #a80f96;
+  position: absolute;
+}

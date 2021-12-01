@@ -1,0 +1,349 @@
+@media all and (max-width: 780px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90vh 90vh 300vh 90vh 90vh 90vh 90vh 210vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4"
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+    font-size: 2vh;
+  }
+  .cont-enla ul li {
+    padding: 0;
+  }
+  .logo {
+    font-size: 3.8vh;
+    flex: 2 1 100%;
+  }
+  .off-1 {
+    display: none;
+  }
+  .lupa {
+    font-size: 2vh;
+    text-align: center;
+  }
+  .bu-principal-1 {
+    width: 28vh;
+    height: 7vh;
+    margin-left: 0%;
+  }
+  .bu-principal {
+    width: 28vh;
+    margin-left: 0;
+    height: 7vh;
+  }
+  .bu-prin-1 {
+    font-size: 2.6vh;
+  }
+  .bu-prin {
+    font-size: 2.6vh;
+  }
+  .des-port-2 {
+    margin-left: 25%;
+  }
+  .des-port {
+    margin-left: 30%;
+  }
+  .cont-publicidad-4 {
+    background-size: 120%;
+  }
+  .ant-foot {
+    grid-area: ant-foot;
+    background: #fff;
+  }
+  .container-foot {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .title-ant {
+    letter-spacing: 5px;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .text-ant {
+    font-size: 2.6vh;
+    margin-top: 2vh;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inp-email {
+    margin-top: 6vh;
+    height: 5vh;
+    font-size: 3;
+    width: 50vh;
+  }
+  .footer {
+    grid-area: footer;
+    overflow: hidden;
+    background: #c5edff;
+  }
+  .redes i {
+    font-size: 4vh;
+  }
+  .container-list {
+    display: flex;
+    flex: column wrap;
+    align-items: stretch;
+    margin-top: 3vh;
+    justify-content: center;
+  }
+  .lista-footer {
+    list-style: none;
+    font-size: 2.5vh;
+    line-height: 6.5vh;
+    text-align: center;
+  }
+  .elem-list a {
+    font-size: 2.2vh;
+    color: #000;
+  }
+  .fab {
+    font-size: 2.8vh;
+    margin-right: 2vh;
+  }
+  .fas {
+    font-size: 2.8vh;
+    margin-right: 2vh;
+  }
+  .derechos-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .dere {
+    font-size: 2.2vh;
+    line-height: 4vh;
+    letter-spacing: 1px;
+  }
+  .url-hijo {
+    font-size: 2vh;
+    align-items: center;
+  }
+  .link-hij {
+    font-size: 2.5;
+  }
+  .ofert-img {
+    text-align: center;
+  }
+  .img-ofertas {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 700px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 390vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4"
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .text-ant {
+    font-size: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .derechos-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .dere {
+    font-size: 2.2vh;
+    line-height: 4vh;
+    letter-spacing: 1px;
+  }
+  .img-sec {
+    width: 120%;
+  }
+}
+
+@media all and (max-width: 542px) {
+  .body__practica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110vh 110vh 380vh 90vh 90vh 90vh 90vh 500vh 50vh 90vh;
+    grid-template-areas:
+      "portada portada"
+      "portada-2 portada-2"
+      "novedades novedades"
+      "cont-publicidad-1 cont-publicidad-1"
+      " cont-publicidad-2 cont-publicidad-2"
+      "cont-publicidad-4 cont-publicidad-4"
+      " cont-publicidad-3 cont-publicidad-3"
+      "secciones secciones"
+      "ant-foot ant-foot"
+      "footer footer";
+  }
+  .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+    font-size: 2vh;
+  }
+  .cont-enla ul li {
+    padding: 0;
+  }
+  .logo {
+    font-size: 3.8vh;
+    flex: 2 1 100%;
+  }
+  .off-1 {
+    display: none;
+  }
+  .lupa {
+    font-size: 2vh;
+    text-align: center;
+  }
+  .bu-principal-1 {
+    width: 28vh;
+    height: 7vh;
+    margin-left: 0%;
+  }
+  .bu-principal {
+    width: 28vh;
+    margin-left: 0;
+    height: 7vh;
+  }
+  .bu-prin-1 {
+    font-size: 2.6vh;
+  }
+  .bu-prin {
+    font-size: 2.6vh;
+  }
+  .des-port-2 {
+    margin-left: 25%;
+  }
+  .des-port {
+    margin-left: 30%;
+  }
+  .cont-publicidad-4 {
+    background-size: 120%;
+  }
+  .ant-foot {
+    grid-area: ant-foot;
+    background: #fff;
+  }
+  .container-foot {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .title-ant {
+    letter-spacing: 5px;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .text-ant {
+    font-size: 2.6vh;
+    margin-top: 2vh;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inp-email {
+    margin-top: 6vh;
+    height: 5vh;
+    font-size: 3;
+    width: 50vh;
+  }
+  .footer {
+    grid-area: footer;
+    overflow: hidden;
+    background: #c5edff;
+  }
+  .redes i {
+    font-size: 4vh;
+  }
+  .container-list {
+    display: flex;
+    flex: column wrap;
+    align-items: stretch;
+    margin-top: 3vh;
+    justify-content: center;
+  }
+  .lista-footer {
+    list-style: none;
+    font-size: 2.5vh;
+    line-height: 6.5vh;
+    text-align: center;
+  }
+  .elem-list a {
+    font-size: 2.2vh;
+    color: #000;
+  }
+  .fab {
+    font-size: 2.8vh;
+    margin-right: 2vh;
+  }
+  .fas {
+    font-size: 2.8vh;
+    margin-right: 2vh;
+  }
+  .derechos-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .dere {
+    font-size: 2.2vh;
+    line-height: 4vh;
+    letter-spacing: 1px;
+  }
+  .url-hijo {
+    font-size: 2vh;
+    align-items: center;
+  }
+  .link-hij {
+    font-size: 2.5;
+  }
+}

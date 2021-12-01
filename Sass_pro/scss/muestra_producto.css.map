@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;EAC9B,kBAAkB,EAAE,qBAAqB;EACzC,mBAAmB,EACjB,qJAGiB;CACpB;;AACD,AAAA,sBAAsB,CAAC;EACrB,SAAS,EAAE,qBAAqB;CACjC;;AACD,AAAA,sBAAsB,CAAC;EACrB,SAAS,EAAE,qBAAqB;CACjC;;AACD,AAAA,qBAAqB,CAAC;EACpB,SAAS,EAAE,oBAAoB;CAChC;;AACD,AAAA,OAAO,CAAC;EACN,SAAS,EAAE,MAAM;CAClB",
+    "sources": [
+        "muestra_producto.scss"
+    ],
+    "names": [],
+    "file": "muestra_producto.css"
+}

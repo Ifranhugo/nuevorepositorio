@@ -1,0 +1,145 @@
+.img__product {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+}
+.container-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.foto_product {
+  height: fit-content;
+  text-align: center;
+  box-shadow: 3px 3px 5px #e5e7e9;
+  position: relative;
+  width: 30%;
+}
+.button_carrr {
+  text-align: center;
+  height: 4.5vh;
+}
+
+.foto-galeria-1 {
+  width: 100%;
+}
+.title_galeria {
+  font-size: 1.275rem;
+  color: var(--letra-gris);
+  margin-top: 3vh;
+  margin-bottom: 1.5vh;
+  font-family: "Mulish", sans-serif;
+}
+.precio_original {
+  font-size: 3.5vh;
+  display: inline-block;
+  margin-left: 3vh;
+}
+.precio_rebaja {
+  font-size: 3vh;
+  margin-left: 3vh;
+  display: inline-block;
+  color: var(--letra-gris);
+}
+.buttom__galery {
+  font-size: 2vh;
+  font-family: "Mulish", sans-serif;
+  color: var(--letra-gris);
+}
+.carrLog {
+  margin-left: 5vh;
+}
+.off_porciento {
+  height: fit-content;
+  display: inline-block;
+  text-align: center;
+  margin-left: 4vh;
+  color: #ebedef;
+  font-family: "Montserrat", sans-serif;
+  width: 7vh;
+  background-color: var(--rosa-fuerte);
+}
+.off_porciento p {
+  font-size: 2.5vh;
+}
+.carrto__comprar {
+  top: 78%;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  background-color: #ebedef;
+  opacity: 0.6;
+  cursor: pointer;
+  height: 10%;
+  position: absolute;
+}
+.carrto__comprar button {
+  height: fit-content;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  opacity: 1;
+  font-size: 4vh;
+  overflow: hidden;
+}
+.carrto__comprar i {
+  font-size: 5vh;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.img__product :hover ~ .carrto__comprar {
+  display: flex;
+}
+.alertCarr {
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+  margin-top: 5%;
+  z-index: 2000;
+  border-radius: 15px 15px 15px 15px;
+  background: #588ec4;
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  transform: translatey(-300px);
+  transition: 0.5s;
+}
+.alertCarr h4 {
+  font-size: 3vh;
+  margin-left: 3vh;
+  font-family: "Mulish", sans-serif;
+  color: white;
+}
+.alertCarrCambio {
+  transform: translatey(0px);
+}
+.alertRemove {
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+  margin-top: 5%;
+  z-index: 5000;
+  border-radius: 15px 15px 15px 15px;
+  background: #588ec4;
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  transform: translatey(-300px);
+  transition: 0.5s;
+}
+.alertRemove h4 {
+  font-size: 3vh;
+  margin-left: 3vh;
+  font-family: "Mulish", sans-serif;
+  color: white;
+}
+.alertRemoveCambio {
+  transform: translatey(0px);
+}

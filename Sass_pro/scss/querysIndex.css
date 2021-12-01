@@ -1,0 +1,116 @@
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .cont-enla ul li a > span {
+    display: none;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .menu {
+    overflow: hidden;
+    display: block;
+  }
+  .cont-enla ul li a > span {
+    display: none;
+  }
+  .logo {
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    height: fit-content;
+    width: 100%;
+  }
+  .menuHamLi {
+    display: block;
+  }
+  .cont-enla ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 6vh;
+  }
+  .cont-enla ul li a {
+    text-align: center;
+  }
+  .lupa {
+    display: none;
+    z-index: 1000;
+  }
+  .fa-shopping-bag {
+    font-size: 3vh;
+  }
+  .body__practica {
+    display: -ms-grid;
+    display: grid;
+    overflow-x: hidden;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 115vh 135vh 90vh 90vh 120vh 50vh 80vh;
+    grid-template-rows: 35% 35% 12% 40% 40% 50% 22% 32%;
+        grid-template-areas: "portada portada" "portada-2 portada-2" "contain_title_ofert  contain_title_ofert" "cont-publicidad-1    cont-publicidad-2" "cont-publicidad-4    cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
+  }
+  .portada {
+    overflow-x: hidden;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contain_ppt {
+    border: 1px solid red;
+  }
+  .bu-prin {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 0;
+    margin: 0%;
+    padding: 0%;
+    left: 0%;
+    right: 0;
+    text-align: center;
+    position: relative;
+    font-size: 3.5vh;
+    font-family: "Mulish", sans-serif;
+  }
+  .des-port {
+    margin-bottom: 0;
+    width: 43vh;
+    text-align: center;
+    margin-left: 0%;
+    font-family: "Mulish", sans-serif;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+/* Smartphones (portrait) ----------- */
+/* iPads (portrait and landscape) ----------- */
+/* iPads (landscape) ----------- */
+/* iPads (portrait) ----------- */
+/* Desktops and laptops ----------- */
+/* Large screens ----------- */
+/* iPhone 4 and high pixel ratio devices ----------- */
+/*# sourceMappingURL=querysIndex.css.map */

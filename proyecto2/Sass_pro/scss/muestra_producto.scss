@@ -1,0 +1,22 @@
+._body_muestra {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 20vh 200vh 180vh 80vh;
+  grid-template-areas:
+    "espacio_blanco   espacio_blanco"
+    "muestra_producto_fot1  muestra_producto_fot2 "
+    "muestra_relacionados    muestra_relacionados"
+    "footer   footer";
+}
+.muestra_producto_fot1 {
+  grid-area: muestra_producto_fot1;
+}
+.muestra_producto_fot2 {
+  grid-area: muestra_producto_fot2;
+}
+.muestra_relacionados {
+  grid-area: muestra_relacionados;
+}
+.footer {
+  grid-area: footer;
+}

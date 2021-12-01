@@ -1,0 +1,126 @@
+.opciones_de_productos {
+  width: 100%;
+  display: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #fff;
+  position: relative;
+}
+
+.opciones_de_productos.opcion_cambio {
+  display: block;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #fff;
+  position: relative;
+}
+
+.button_opciones {
+  padding-left: 7vh;
+  padding-right: 2vh;
+  border: none;
+  font-size: 4vh;
+}
+
+.menu_opciones {
+  width: 95%;
+  height: 50%;
+}
+
+.container_opciones_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  border-top: none;
+}
+
+.categorias_opciones {
+  width: 40%;
+  padding-right: 20vh;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 7vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 5vh;
+}
+
+.talle_opciones {
+  width: 20%;
+  list-style: none;
+  line-height: 5vh;
+}
+
+.color_opciones {
+  width: 10%;
+  list-style: none;
+  line-height: 7vh;
+}
+
+.color_opciones-1 {
+  margin-top: 6.4vh;
+  width: 20%;
+  list-style: none;
+  line-height: 7vh;
+}
+
+.list_opciones {
+  font-size: 2.4vh;
+  color: black;
+}
+
+.title_menu_opciones-1 {
+  font-size: 3vh;
+  position: absolute;
+  font-family: "Noto Serif Display", serif;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
+  width: 20%;
+  color: black;
+  padding-left: 20vh;
+  padding-right: 20vh;
+}
+
+.list_opciones-1 {
+  padding-left: 6vh;
+  font-size: 2vh;
+  text-decoration: none;
+  color: black;
+}
+
+.list_opciones-1 :hover {
+  color: var(--letra-gris);
+  font-size: 2.4vh;
+}
+
+.list_opciones :hover {
+  color: var(--letra-gris);
+  font-size: 3vh;
+}
+
+.title_menu_opciones {
+  font-size: 3vh;
+  color: black;
+}
+
+.cuadrados_colores {
+  height: 10px;
+  width: 10px;
+  margin-right: 5vh;
+  background: blueviolet;
+  display: inline-block;
+}
+/*# sourceMappingURL=title-menuflort.css.map */
