@@ -2900,6 +2900,30 @@ th {
     margin-left: 0%;
     font-family: "Mulish", sans-serif;
   }
+  .carrusel_adelante {
+    -webkit-transform: translate(0, 750%);
+            transform: translate(0, 750%);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: transparent;
+    border: none;
+  }
+  .carrusel_atras {
+    -webkit-transform: translate(1300%, 750%);
+            transform: translate(1300%, 750%);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background: transparent;
+    border: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 /* Smartphones (landscape) ----------- */

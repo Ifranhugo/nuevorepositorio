@@ -154,6 +154,20 @@
     margin-left: 0%;
     font-family: "Mulish", sans-serif;
   }
+  .carrusel_adelante {
+    transform: translate(0, 750%);
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    border: none;
+  }
+  .carrusel_atras {
+    transform: translate(1300%, 750%);
+    height: fit-content;
+    background: transparent;
+    border: none;
+    width: fit-content;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
