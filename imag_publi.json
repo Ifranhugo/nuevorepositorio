@@ -1,18 +1,14 @@
 [
   {
-    "id": "1",
-    "img": "camiza-ginza.jpg"
+    "img": "../imagenes-proyecto/imgpubli-1.jpeg"
   },
   {
-    "id": "2",
-    "img3": "muestra_6_3.jpg"
+    "img": "../imagenes-proyecto/image0000431-79da39a9ba220ab08516316458720084-1024-1024.jpeg"
   },
   {
-    "id": "3",
-    "img3": "muestra_27_3.jpg"
+    "img": "../imagenes-proyecto/img-punli-gorrojpeg.jpeg"
   },
   {
-    "id": "4",
-    "img2": "muestra_25_2.png"
+    "img": "../imagenes-proyecto/carterita.jpg"
   }
 ]
