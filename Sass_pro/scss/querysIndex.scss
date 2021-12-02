@@ -27,7 +27,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .menu {
     overflow: hidden;
-
+    width: 100%;
     display: block;
   }
   .cont-enla ul li a > span {
@@ -62,26 +62,43 @@
   .fa-shopping-bag {
     font-size: 3vh;
   }
+  .contain_title_ofert {
+    font-size: 1vh;
+  }
   .body__practica {
+    overflow-x: hidden;
+    overflow-y: auto;
+
     display: -ms-grid;
     display: grid;
     overflow-x: hidden;
+    flex-wrap: wrap;
+    overflow-x: scroll;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 115vh 135vh 90vh 90vh 120vh 50vh 80vh;
-    grid-template-rows: 35% 35%12% 40% 40% 50% 22% 32%;
+    grid-template-rows: 25% 25% 7% 16% 30% 13% 10%;
     grid-template-areas:
       "portada portada"
       "portada-2 portada-2"
       "contain_title_ofert  contain_title_ofert"
-      "cont-publicidad-1    cont-publicidad-2"
-      "cont-publicidad-4    cont-publicidad-3"
+      "containPrincipal  containPrincipal"
       "secciones secciones"
       "ant-foot ant-foot"
       "footer footer";
   }
+  .span_publi {
+    display: none;
+  }
+  .containPrincipal {
+    border: medium solid red;
+    overflow: hidden;
+    grid-area: containPrincipal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
   .portada {
-    overflow-x: hidden;
     background-position: center;
     flex-direction: column;
     align-items: center;
@@ -103,8 +120,34 @@
     font-size: 3.5vh;
     font-family: "Mulish", sans-serif;
   }
-
+  .portada-2 {
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .des-port {
+    margin-bottom: 0;
+    width: 43vh;
+    text-align: center;
+    margin-left: 0%;
+    font-family: "Mulish", sans-serif;
+  }
+  .bu-prin-1 {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 0;
+    margin: 0%;
+    padding: 0%;
+    left: 0%;
+    right: 0;
+    text-align: center;
+    position: relative;
+    font-size: 3.5vh;
+    font-family: "Mulish", sans-serif;
+  }
+
+  .des-port-2 {
     margin-bottom: 0;
     width: 43vh;
     text-align: center;
