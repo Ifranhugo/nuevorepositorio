@@ -34,3 +34,4 @@ function displayWindowSize() {
   //   "Width: " + w + ", " + "Height: " + h;
 }
 window.addEventListener("resize", displayWindowSize);
+displayWindowSize()
