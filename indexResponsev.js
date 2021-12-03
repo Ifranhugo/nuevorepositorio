@@ -21,10 +21,6 @@ document.addEventListener("domCont", () => {
   console.log(contenedor, "euuuu");
 });
 
-function log(content) {
-  console.log(content);
-}
-
 export let frj = "./imag_publi.json";
 import { flechaatras, flechaadelante, imgPubli } from "./index.js";
 export async function request(frj, fun) {
@@ -34,7 +30,6 @@ export async function request(frj, fun) {
   fun(containPrincipalID, jsonArray, flechaatras, flechaadelante, imgPubli);
 }
 
-request(frj, log);
 export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
   let cont = 0,
     array = [nam];
@@ -44,23 +39,15 @@ export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
         if (cont > 0) {
           imgPublicidad.src = ent[cont - 1][1].img;
           cont--;
-          //console.log(cont);
         } else {
           imgPublicidad.src = ent[ent.length - 1][1].img;
-          console.log(ent[ent.length - 1][1].img);
           cont = ent.length;
         }
       } else if (ed.target == adelante) {
         if (cont < ent.length - 1) {
-          // console.log("lenght  ", ent.length - 1);
-
-          // console.log(ent[1][1]);
-          // console.log(imgPublicidad.src);
-          imgPublicidad.src = ent[1][1].img;
+          imgPublicidad.src = ent[cont + 1][1].img;
           cont++;
-          //console.log(cont);
         } else {
-          //console.log("else adealnte  ", ent.length - 1);
           imgPublicidad.src = ent[0][1].img;
           cont = 0;
         }
