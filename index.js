@@ -12,7 +12,7 @@ let body__practicaID = document.getElementById("body__practicaID"),
 
 responiveMedia(
   "containPrincipalID",
-  "(max-width: 3700px)",
+  "(max-width: 370px)",
   `${contPubli}`,
   "desktopcontent"
 );
