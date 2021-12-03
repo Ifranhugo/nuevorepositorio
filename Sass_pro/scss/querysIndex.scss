@@ -154,17 +154,29 @@
     margin-left: 0%;
     font-family: "Mulish", sans-serif;
   }
-  .carrusel_adelante {
-    transform: translate(0, 750%);
+  .containPrincipal {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .imgPubli {
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carrusel_atras {
+    transform: translate(0%, 1000%);
     height: fit-content;
     width: fit-content;
     background: transparent;
-    border: none;
+    position: absolute;
+    border: 1px solid red;
   }
-  .carrusel_atras {
-    transform: translate(1300%, 750%);
+  .carrusel_adelante {
+    transform: translate(1640%, 1150%);
     height: fit-content;
     background: transparent;
+    position: absolute;
     border: none;
     width: fit-content;
   }

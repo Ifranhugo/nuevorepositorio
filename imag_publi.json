@@ -1,14 +1,9 @@
 [
+  { "hola": "hola", "img": "../imagenes-proyecto/imgpubli-1.jpeg" },
   {
-    "img": "../imagenes-proyecto/imgpubli-1.jpeg"
-  },
-  {
+    "hola": "hola",
     "img": "../imagenes-proyecto/image0000431-79da39a9ba220ab08516316458720084-1024-1024.jpeg"
   },
-  {
-    "img": "../imagenes-proyecto/img-punli-gorrojpeg.jpeg"
-  },
-  {
-    "img": "../imagenes-proyecto/carterita.jpg"
-  }
+  { "hola": "hola", "img": "../imagenes-proyecto/img-punli-gorrojpeg.jpeg" },
+  { "hola": "hola", "img": "../imagenes-proyecto/carterita.jpg" }
 ]
