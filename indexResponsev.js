@@ -24,39 +24,44 @@ document.addEventListener("domCont", () => {
 function log(content) {
   console.log(content);
 }
-import { flechaatras } from "./index.js";
+
 export let frj = "./imag_publi.json";
+import { flechaatras, flechaadelante, imgPubli } from "./index.js";
 export async function request(frj, fun) {
   let respuesta = await fetch(frj);
   let json = await respuesta.json();
   let jsonArray = Object.entries(json);
-  fun(containPrincipalID, jsonArray, flechaatras);
+  fun(containPrincipalID, jsonArray, flechaatras, flechaadelante, imgPubli);
 }
 
 request(frj, log);
-export function Carrusel(contenedor, nam, atras) {
+export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
+  let cont = 0,
+    array = [nam];
   contenedor.addEventListener("click", (ed) => {
-    (adelante = contenedor.querySelector(".carrusel_adelante")),
-      (cont = 0),
-      (imgPubli = contenedor.querySelector("imgPubli")),
-      (tgt = ed.target),
-      (array = [nam]);
     array.forEach((ent) => {
-      if (tgt === atras) {
-        console.log("anda");
+      if (ed.target == atras) {
         if (cont > 0) {
-          imgPubli.src = ent[cont - (1)[1]];
+          imgPublicidad.src = ent[cont - 1][1].img;
           cont--;
+          //console.log(cont);
         } else {
-          imgPubli.src = ent[ent.length - 1];
-          cont = ent.length - 1;
+          imgPublicidad.src = ent[ent.length - 1][1].img;
+          console.log(ent[ent.length - 1][1].img);
+          cont = ent.length;
         }
-      } else if (tgt == adelante) {
-        if (cont > ent.length - 1) {
-          imgPubli.src = ent[ent.length + 1];
+      } else if (ed.target == adelante) {
+        if (cont < ent.length - 1) {
+          // console.log("lenght  ", ent.length - 1);
+
+          // console.log(ent[1][1]);
+          // console.log(imgPublicidad.src);
+          imgPublicidad.src = ent[1][1].img;
           cont++;
+          //console.log(cont);
         } else {
-          imgPubli.src = ent[0][1];
+          //console.log("else adealnte  ", ent.length - 1);
+          imgPublicidad.src = ent[0][1].img;
           cont = 0;
         }
       }
