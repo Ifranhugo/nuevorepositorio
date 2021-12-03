@@ -9,7 +9,7 @@
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 370px) {
   .menu {
     overflow: hidden;
     width: 100%;
@@ -278,7 +278,13 @@
     font-size: 112%;
     margin-bottom: 10px;
   }
-  .url-hijo .url-hijo_2 {
+  .url-hijo {
+    font-size: 90%;
+  }
+  .url-hijo_2 {
+    font-size: 90%;
+  }
+  .link-hij {
     font-size: 90%;
   }
 }
