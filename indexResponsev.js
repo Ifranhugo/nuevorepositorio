@@ -1,16 +1,17 @@
 const w = window,
   d = document;
 
-export default function responiveMedia(id, mq, movilecontent, desktopcontent) {
+export default function responiveMedia(id, mq, movilecontent) {
   let breackpoint = w.matchMedia(mq);
 
   const resposive = (e) => {
     if (e.matches) {
       d.getElementById(id).innerHTML = movilecontent;
+      Carrusel(containPrincipalID, frj);
+      console.log("entro");
     } else {
-      d.getElementById(id);
+      console.log("no entro");
     }
-    Carrusel(containPrincipalID, frj);
   };
 
   breackpoint.addListener(resposive);

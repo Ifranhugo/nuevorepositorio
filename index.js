@@ -10,18 +10,27 @@ let contPubli = `
 let body__practicaID = document.getElementById("body__practicaID"),
   containPrincipalID = document.getElementById("containPrincipalID");
 
-responiveMedia(
-  "containPrincipalID",
-  "(max-width: 400px)",
-  `${contPubli}`,
-  "desktopcontent"
-);
+responiveMedia("containPrincipalID", "(max-width: 400px)", `${contPubli}`);
 let imgPubli = document.querySelector(".imgPubli");
 import { Carrusel, request, frj } from "./indexResponsev.js";
 
 let flechaatras = document.querySelector(".carrusel_atras"),
   flechaadelante = document.querySelector(".carrusel_adelante");
 export { flechaatras, flechaadelante, imgPubli };
-document.addEventListener("DOMContentLoaded", () => {
-  request(frj, Carrusel);
-});
+
+// Attaching the event listener function to window's resize event
+
+function displayWindowSize() {
+  // Get width and height of the window excluding scrollbars
+  var w = document.documentElement.clientWidth;
+  var h = document.documentElement.clientHeight;
+  if (w <= 400) {
+    console.log("Carrusel");
+    request(frj, Carrusel);
+  }
+
+  // Display result inside a div element
+  // document.getElementById("result").innerHTML =
+  //   "Width: " + w + ", " + "Height: " + h;
+}
+window.addEventListener("resize", displayWindowSize);
