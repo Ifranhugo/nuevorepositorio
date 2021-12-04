@@ -6,8 +6,9 @@ export default function responiveMedia(id, mq, movilecontent, descktopt) {
 
   const resposive = (e) => {
     if (e.matches) {
-      Carrusel(containPrincipalID, frj);
       d.getElementById(id).innerHTML = movilecontent;
+
+      Carrusel(containPrincipalID, frj);
     } else {
       d.getElementById(id).innerHTML = descktopt;
     }
@@ -27,12 +28,9 @@ export async function request(frj, fun) {
 }
 
 export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
-  console.log("adentro de carruser");
   let cont = 0,
     array = [nam];
-  console.log(imgPublicidad);
   contenedor.addEventListener("click", (ed) => {
-    console.log(atras, " ", adelante);
     array.forEach((ent) => {
       if (ed.target == atras) {
         if (cont > 0) {
@@ -43,7 +41,6 @@ export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
           cont = ent.length;
         }
       } else if (ed.target == adelante) {
-        console.log("else");
         if (cont < ent.length - 1) {
           imgPublicidad.src = ent[cont + 1][1].img;
           cont++;
