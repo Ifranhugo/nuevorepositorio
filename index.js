@@ -56,6 +56,4 @@ function displayWindowSize() {
 displayWindowSize();
 window.addEventListener("resize", displayWindowSize);
 
-// Display result inside a div element
-// document.getElementById("result").innerHTML =
-//   "Width: " + w + ", " + "Height: " + h;
+displayWindowSize();
