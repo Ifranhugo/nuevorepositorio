@@ -47,7 +47,7 @@ function displayWindowSize() {
   var h = document.documentElement.clientHeight;
   if (w <= 400) {
     request(frj, Carrusel);
-
+    console.log(flechaadelante);
     console.log("Carrusel");
   } else {
     console.log("no carrusel");
