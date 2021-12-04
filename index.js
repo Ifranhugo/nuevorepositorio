@@ -47,10 +47,10 @@ export { flechaatras, flechaadelante, imgPubli };
 function displayWindowSize() {
   var w = document.documentElement.clientWidth;
   var h = document.documentElement.clientHeight;
-
-  if (w < 400) {
-    console.log(w);
+  if (w <= 400) {
     request(frj, Carrusel);
+    console.log(flechaadelante);
+    console.log("Carrusel");
   } else {
     console.log("no carrusel");
   }
