@@ -1,26 +1,21 @@
 const w = window,
   d = document;
 
-export default function responiveMedia(id, mq, movilecontent) {
+export default function responiveMedia(id, mq, movilecontent, descktopt) {
   let breackpoint = w.matchMedia(mq);
 
   const resposive = (e) => {
     if (e.matches) {
-      d.getElementById(id).innerHTML = movilecontent;
       Carrusel(containPrincipalID, frj);
-      console.log("entro");
+      d.getElementById(id).innerHTML = movilecontent;
     } else {
-      console.log("no entro");
+      d.getElementById(id).innerHTML = descktopt;
     }
   };
 
   breackpoint.addListener(resposive);
   resposive(breackpoint);
 }
-document.addEventListener("domCont", () => {
-  request(frj, Carrusel(containPrincipalID));
-  console.log(contenedor, "euuuu");
-});
 
 export let frj = "./imag_publi.json";
 import { flechaatras, flechaadelante, imgPubli } from "./index.js";
@@ -32,9 +27,12 @@ export async function request(frj, fun) {
 }
 
 export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
+  console.log("adentro de carruser");
   let cont = 0,
     array = [nam];
+  console.log(imgPublicidad);
   contenedor.addEventListener("click", (ed) => {
+    console.log(atras, " ", adelante);
     array.forEach((ent) => {
       if (ed.target == atras) {
         if (cont > 0) {
@@ -45,6 +43,7 @@ export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
           cont = ent.length;
         }
       } else if (ed.target == adelante) {
+        console.log("else");
         if (cont < ent.length - 1) {
           imgPublicidad.src = ent[cont + 1][1].img;
           cont++;
