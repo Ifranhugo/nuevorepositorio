@@ -33,7 +33,7 @@ let body__practicaID = document.getElementById("body__practicaID"),
 import { Carrusel, request, frj } from "./indexResponsev.js";
 responiveMedia(
   "containPrincipalID",
-  "(max-width: 400px)",
+  "(max-width: 420px)",
   `${contPubli}`,
   `${contPubliDesck}`
 );
@@ -47,7 +47,7 @@ export { flechaatras, flechaadelante, imgPubli };
 function displayWindowSize() {
   var w = document.documentElement.clientWidth;
   var h = document.documentElement.clientHeight;
-  if (w <= 400) {
+  if (w <= 420) {
     request(frj, Carrusel);
     console.log(flechaadelante);
     console.log("Carrusel");
