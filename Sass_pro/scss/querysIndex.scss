@@ -24,7 +24,7 @@
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-device-width: 420px) {
+@media only screen and (max-device-width: 480px) {
   .menu {
     overflow: hidden;
     width: 100%;
@@ -144,6 +144,7 @@
     text-align: center;
     margin-left: 0%;
     font-family: "Mulish", sans-serif;
+    //---------------------Carrusel
   }
   .containPrincipal {
     overflow: hidden;
@@ -152,7 +153,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    text-align: center;
+    justify-content: center;
     background-color: whitesmoke;
     height: 70vh;
   }
@@ -173,27 +174,23 @@
     transform: translateY(-200%);
     background: transparent;
     position: absolute;
-
+    text-align: center;
+    right: 90%;
     border: none;
   }
   .carrusel_adelante {
-    background: transparent;
-  }
-  .carrusel_atras p {
-    font-size: 3vh;
-    background: transparent;
-  }
-  .carrusel_adelante {
-    transform: translate(3150%, -200%);
+    transform: translateY(-200%);
+    left: 90%;
     background: transparent;
     position: absolute;
     border: none;
-    width: fit-content;
   }
   .bu-publicidad {
     position: absolute;
     transform: translate(50%, 700%);
+    left: 0;
   }
+  //-----------------------------------secciones
   .secciones {
     flex-wrap: wrap;
     align-items: center;
