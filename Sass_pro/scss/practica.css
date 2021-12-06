@@ -2740,7 +2740,7 @@ th {
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-device-width: 370px) {
+@media only screen and (max-device-width: 480px) {
   .menu {
     overflow: hidden;
     width: 100%;
@@ -2891,7 +2891,9 @@ th {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;
-    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: whitesmoke;
     height: 70vh;
   }
@@ -2914,29 +2916,23 @@ th {
             transform: translateY(-200%);
     background: transparent;
     position: absolute;
+    text-align: center;
+    right: 90%;
     border: none;
   }
   .carrusel_adelante {
-    background: transparent;
-  }
-  .carrusel_atras p {
-    font-size: 3vh;
-    background: transparent;
-  }
-  .carrusel_adelante {
-    -webkit-transform: translate(3150%, -200%);
-            transform: translate(3150%, -200%);
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    left: 90%;
     background: transparent;
     position: absolute;
     border: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
   .bu-publicidad {
     position: absolute;
     -webkit-transform: translate(50%, 700%);
             transform: translate(50%, 700%);
+    left: 0;
   }
   .secciones {
     -ms-flex-wrap: wrap;
