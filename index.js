@@ -1,4 +1,5 @@
 import responiveMedia from "./indexResponsev.js";
+const d = document;
 let contPubli = `   
        <button  value="" class ="btCarrusel" id="btCarrusel"><i class="fas fa-chevron-left carrusel_atras" _mstvisible="2"></i></button>
         <div class="bu-publicidad">
@@ -27,9 +28,9 @@ let contPubliDesck = `
         <a href="accesorios.html" class="bu-publi">ver</a>
       </div>`;
 
-let body__practicaID = document.getElementById("body__practicaID"),
-  containPrincipalID = document.getElementById("containPrincipalID"),
-  btCarrusel = document.getElementById("btCarrusel");
+let body__practicaID = d.getElementById("body__practicaID"),
+  containPrincipalID = d.getElementById("containPrincipalID"),
+  btCarrusel = d.getElementById("btCarrusel");
 import { Carrusel, request, frj } from "./indexResponsev.js";
 responiveMedia(
   "containPrincipalID",
@@ -38,15 +39,15 @@ responiveMedia(
   `${contPubliDesck}`
 );
 
-let flechaatras = document.querySelector(".carrusel_atras"),
-  flechaadelante = document.querySelector(".carrusel_adelante"),
-  imgPubli = document.querySelector(".imgPubli");
+let flechaatras = d.querySelector(".carrusel_atras"),
+  flechaadelante = d.querySelector(".carrusel_adelante"),
+  imgPubli = d.querySelector(".imgPubli");
 export { flechaatras, flechaadelante, imgPubli };
 // Attaching the event listener function to window's resize event
 //Get width and height of the window excluding scrollbars
 function displayWindowSize() {
-  var w = document.documentElement.clientWidth;
-  var h = document.documentElement.clientHeight;
+  var w = d.dElement.clientWidth;
+  var h = d.dElement.clientHeight;
   if (w <= 420) {
     request(frj, Carrusel);
     console.log(flechaadelante);
@@ -57,3 +58,9 @@ function displayWindowSize() {
 }
 window.addEventListener("resize", displayWindowSize, true);
 displayWindowSize();
+//-------------------------------------------------
+import { hamburguerMenu } from "./indexResponsev.js";
+
+d.addEventListener("DOMContentLoad", (e) => {
+  hamburguerMenu(".panel_btn", "panel_hambur");
+});
