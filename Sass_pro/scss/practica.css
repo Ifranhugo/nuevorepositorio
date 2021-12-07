@@ -2822,6 +2822,12 @@ th {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .bu-principal {
+    margin-left: 0;
+  }
+  .bu-principal-1 {
+    margin-left: 0;
+  }
   .bu-prin {
     text-decoration: none;
     color: #fff;
@@ -2981,6 +2987,9 @@ th {
     height: 105%;
     font-size: 3;
     width: 160%;
+  }
+  .redes {
+    margin-bottom: 2%;
   }
   .elem-list a {
     font-size: 112%;
