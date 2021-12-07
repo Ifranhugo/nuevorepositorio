@@ -62,7 +62,6 @@
   margin-right: 3vh;
 }
 .logo {
-  font-size: 150%;
   color: #000;
   letter-spacing: 0.1vh;
   padding-left: 10vh;
@@ -74,7 +73,9 @@
   animation-duration: 2s;
   animation-delay: 0.5;
 }
-
+.logoCLass {
+  font-size: 190%;
+}
 @keyframes prueba {
   from {
     opacity: 0;
