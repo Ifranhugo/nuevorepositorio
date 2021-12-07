@@ -5,7 +5,7 @@ let contPubli = `
           <a href="accesorios.html" class="bu-publi">ver</a>
         </div>
         <button value="" class ="btCarrusel"><i class="fas fa-chevron-right carrusel_adelante" _mstvisible="2"></i></button>
-        <img src="../imagenes-proyecto/imgpubli-1.jpeg" alt=""  class="imgPubli">`;
+        <img src="./imagenes-proyecto/imgpubli-1.jpeg" alt=""  class="imgPubli">`;
 let contPubliDesck = `
   <section class="cont-publicidad-1 span_publi">
       <div class="bu-publicidad">
