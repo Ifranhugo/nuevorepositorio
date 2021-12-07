@@ -52,3 +52,13 @@ export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
     });
   });
 }
+//-----------------------------
+
+export function hamburguerMenu(panelBtn, panel) {
+  const d = document;
+  d.addEventListener("click", (e) => {
+    if (e.target.matches(panelBtn)) {
+      d.querySelector(panel).classList.toggle("panelActive");
+    }
+  });
+}

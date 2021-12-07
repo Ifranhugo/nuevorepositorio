@@ -2762,13 +2762,89 @@ th {
     height: fit-content;
     width: 100%;
   }
-  .menuHamLi {
+  .container_hambur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .panel_btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+  }
+  .panel_hambur {
+    position: fixed;
+    z-index: 998;
+    background: #a39696;
+    opacity: 0.5;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  .ul_hambur {
+    width: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    list-style: none;
+  }
+  .ul_hambur a {
+    width: 100%;
+    padding: 10%;
     display: block;
+    font-size: 2vh;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .ul_hambur li :hover {
+    font-weight: bold;
+    color: #8a6e6e;
+    background-color: darkblue;
+  }
+  .off {
+    display: none;
   }
   .cont-enla ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: center;
@@ -2987,9 +3063,6 @@ th {
     height: 105%;
     font-size: 3;
     width: 160%;
-  }
-  .redes {
-    margin-bottom: 2%;
   }
   .elem-list a {
     font-size: 112%;
