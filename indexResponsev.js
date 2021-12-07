@@ -54,11 +54,11 @@ export function Carrusel(contenedor, nam, atras, adelante, imgPublicidad) {
 }
 //-----------------------------
 
-export function hamburguerMenu(panelBtn, panel) {
+export function hamburguerMenu(panel_btn, panel_hambur) {
   const d = document;
-  d.addEventListener("click", (e) => {
-    if (e.target.matches(panelBtn)) {
-      d.querySelector(panel).classList.toggle("panelActive");
+  d.addEventListener("click", (el) => {
+    if (el.target.matches(panel_btn)) {
+      d.querySelector(panel_hambur).classList.toggle("panelActive");
     }
   });
 }

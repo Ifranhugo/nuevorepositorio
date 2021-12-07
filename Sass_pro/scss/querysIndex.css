@@ -45,9 +45,22 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .menuHamCon {
+    background-color: white;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    text-align: end;
+  }
+  .btnCarr_ham {
+    border: none;
+    background: none;
+    padding: 2%;
+  }
   .panel_btn {
     position: fixed;
-    z-index: 999;
+    z-index: 2005;
     bottom: 1vh;
     right: 1vh;
     width: 4rem;
@@ -68,8 +81,7 @@
   .panel_hambur {
     position: fixed;
     z-index: 998;
-    background: #a39696;
-    opacity: 0.5;
+    background: white;
     width: 100%;
     top: 0;
     bottom: 0;
@@ -77,8 +89,9 @@
     transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    -webkit-transform: translate(0, -100);
-            transform: translate(0, -100);
+    color: black;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
   .panel_hambur.panelActive {
     -webkit-transform: translate(0, 0);
@@ -96,17 +109,16 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: start;
     list-style: none;
   }
-  .ul_hambur a {
+  .ul_hambur li {
     width: 100%;
-    padding: 10%;
+    padding: 7%;
     display: block;
-    font-size: 2vh;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -116,8 +128,50 @@
     color: #8a6e6e;
     background-color: darkblue;
   }
+  .ul_hambur li a {
+    text-decoration: none;
+    color: black;
+    font-size: 130%;
+    font-family: "Mulish", sans-serif;
+  }
+  .ul_hambur_fas {
+    width: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top: 1px solid black;
+    text-align: start;
+    list-style: none;
+  }
+  .title_Hamburg {
+    padding: 5%;
+    font-size: 160%;
+    font-family: "Mulish", sans-serif;
+  }
+  .ul_hambur_fas li {
+    width: 100%;
+    padding: 7%;
+    display: block;
+    text-decoration: none;
+    background-color: #d4cbcb;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .a_ul_fas {
+    text-decoration: none;
+    color: black;
+    font-size: 130%;
+    font-family: "Mulish", sans-serif;
+  }
   .off {
     display: none;
+  }
+  .ul_hambur_fas li {
+    list-style: none;
   }
   .cont-enla ul {
     display: -webkit-box;
