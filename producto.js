@@ -13,13 +13,12 @@ function cambio() {
   }
 }
 efecto_menu.addEventListener("click", cambio, true);
-const button_cerrar_modalID = document.getElementById("button_cerrar_modalID");
-const seccionCarID = document.getElementById("seccionCarID");
-const TbodyID = document.getElementById("TbodyID");
-const Clickbuttom = document.querySelectorAll("#buttom__galeryID");
-let body_productID = document.getElementById("body_productID");
-
-const button_carrrID = document.getElementById("button_carrrID");
+const button_cerrar_modalID = document.getElementById("button_cerrar_modalID"),
+  seccionCarID = document.getElementById("seccionCarID"),
+  TbodyID = document.getElementById("TbodyID"),
+  Clickbuttom = document.querySelectorAll("#buttom__galeryID"),
+  body_productID = document.getElementById("body_productID"),
+  button_carrrID = document.getElementById("button_carrrID");
 
 button_carrrID.addEventListener("click", () => {
   seccionCarID.classList.toggle("seccionCarCambio");
@@ -176,7 +175,6 @@ document.addEventListener("click", (e) => {
     );
   }
 });
-
 // function pasarPagina(e) {
 //   console.log("2");
 // }
@@ -184,3 +182,8 @@ document.addEventListener("click", (e) => {
 // $pasarMuestraId.forEach((src) => {
 //   src.addEventListener("click", pasarPagina);
 // });
+
+//---------------------------------------------
+import { hamburguerMenu, menuHambur, sectionMenu } from "./indexResponsev.js";
+import { responiveMediaMenu } from "./indexResponsev.js";
+responiveMediaMenu();
