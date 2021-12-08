@@ -1,17 +1,9 @@
-import { responiveMediaMenu } from "./indexResponsev.js";
-import responiveMedia from "./responiveMedia.js";
-import {
-  hamburguerMenu,
-  menuHambur,
-  sectionMenu,
-  Carrusel,
-  request,
-  frj,
-  w,
-  d,
-} from "./indexResponsev.js";
+import { responiveMedia } from "./indexResponsev.js";
+import { responiveMediaMenu, hamburguerMenu } from "./menuJS.js";
+import { Carrusel, request, frj, w, d } from "./indexResponsev.js";
 
 hamburguerMenu();
+
 let contPubli = `   
        <button  value="" class ="btCarrusel" id="btCarrusel"><i class="fas fa-chevron-left carrusel_atras" _mstvisible="2"></i></button>
         <div class="bu-publicidad">
@@ -39,14 +31,13 @@ let contPubliDesck = `
       <div class="bu-publicidad">
         <a href="accesorios.html" class="bu-publi">ver</a>
       </div>`;
-
+responiveMediaMenu();
 responiveMedia(
   "containPrincipalID",
   "(max-width: 420px)",
   `${contPubli}`,
   `${contPubliDesck}`
 );
-responiveMediaMenu();
 let body__practicaID = d.getElementById("body__practicaID"),
   containPrincipalID = d.getElementById("containPrincipalID"),
   btCarrusel = d.getElementById("btCarrusel"),
