@@ -1,7 +1,10 @@
-let efecto_menu = document.getElementById("efecto_buttom");
-let menu_flotante = document.getElementById("opciones_en_js");
-let contador = 0;
-let carrito = [];
+import { responiveMediaMenu, hamburguerMenu } from "./menuJS.js";
+responiveMediaMenu();
+hamburguerMenu();
+let efecto_menu = document.getElementById("efecto_buttom"),
+  menu_flotante = document.getElementById("opciones_en_js"),
+  contador = 0,
+  carrito = [];
 //funcion para el menu flotante
 function cambio() {
   if (contador == 0) {
@@ -32,11 +35,11 @@ Clickbuttom.forEach((btn) => {
 
 //funcion para  recorrer los botones del carrito
 function CarritoItem(ev) {
-  const button = ev.target;
-  const item = button.closest(".foto_product");
-  const itemTitle = item.querySelector(".title_galeria").textContent;
-  const itemPrice = item.querySelector(".precio_original").textContent;
-  const itemImag = item.querySelector(".foto-galeria-1").src;
+  const button = ev.target,
+    item = button.closest(".foto_product"),
+    itemTitle = item.querySelector(".title_galeria").textContent,
+    itemPrice = item.querySelector(".precio_original").textContent,
+    itemImag = item.querySelector(".foto-galeria-1").src;
   //objeto para las variables del carrito y con el metodo para ejecutarlo
   const newItem = {
     title: itemTitle,
@@ -112,9 +115,9 @@ function TotalCarr() {
 }
 //funcion para remover los productos del carrito
 function removeItemCarrito(e) {
-  const buttomDelete = e.target;
-  const tr = buttomDelete.closest(".itemCarrito");
-  const tituloRemove = tr.querySelector(".titlee").textContent;
+  const buttomDelete = e.target,
+    tr = buttomDelete.closest(".itemCarrito"),
+    tituloRemove = tr.querySelector(".titlee").textContent;
   for (let ir = 0; ir < carrito.length; ir++) {
     if (carrito[ir].title.trim() === tituloRemove.trim()) {
       carrito.splice(ir, 1);
@@ -155,12 +158,10 @@ window.onload = function (params) {
     renderCarrito();
   }
 };
-const $pasarMuestraId = document.querySelector(".a_fotogalery");
-const foto_galeria_1 = document.querySelector(".foto-galeria-1");
+const $pasarMuestraId = document.querySelector(".a_fotogalery"),
+  foto_galeria_1 = document.querySelector(".foto-galeria-1");
 
 document.addEventListener("click", (e) => {
-  console.log("le diste click a ", e.target);
-
   if (e.target.matches(".a_fotogalery")) {
     let infor = e.target;
     const idproductos = infor.closest("#foto_productID");
@@ -184,6 +185,3 @@ document.addEventListener("click", (e) => {
 // });
 
 //---------------------------------------------
-import { hamburguerMenu, menuHambur, sectionMenu } from "./indexResponsev.js";
-import { responiveMediaMenu } from "./indexResponsev.js";
-responiveMediaMenu();

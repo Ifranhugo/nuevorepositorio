@@ -138,7 +138,7 @@ a {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 115vh 135vh 90vh 90vh 120vh 50vh 80vh;
   grid-template-rows: 31% 38% 19% 19% 28% 15% 21%;
-      grid-template-areas: "portada portada-2" "novedades novedades" "cont-publicidad-1    cont-publicidad-2" "cont-publicidad-4    cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
+      grid-template-areas: "portada portada-2" "novedades novedades" "cont-publicidad-1    cont-publicidad-2" "cont-publicidad-4    cont-publicidad-3" "secciones secciones" "ant-foot ant-foot" "footer footer";
 }
 .portada {
   -ms-grid-row: 1;
