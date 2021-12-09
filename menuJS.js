@@ -28,16 +28,16 @@ var sectionMenu = `        <section class="menu">
     <ul class="ul_hambur">
       <h4 class="title_Hamburg">Primvera verano</h4>
       <li>
-        <a href="#">Inicio</a>
+        <a href="index.html">Inicio</a>
       </li>
       <li>
-        <a href="#">Novedades</a>
+        <a href="novedades.html">Novedades</a>
       </li>
       <li>
-        <a href="#">Productos</a>
+        <a href="productos.html">Productos</a>
       </li>
       <li>
-        <a href="#">Accesorios</a>
+        <a href="accesorios.html">Accesorios</a>
       </li>
     </ul>
     <ul class="ul_hambur_fas">
@@ -82,4 +82,79 @@ export function hamburguerMenu(panel_btn, panel_hambur) {
     hamburguerMenu(".panel_btn", ".panel_hambur");
     console.log("hola");
   });
+}
+//------------------------------------MENU FLOTANTE
+export function menuFloar() {
+  let efecto_menu = document.getElementById("efecto_buttom"),
+    menu_flotante = document.getElementById("opciones_en_js"),
+    menu_opciones = document.querySelector(".menu_opciones"),
+    contador = 0;
+  efecto_menu.addEventListener("click", cambio, true);
+  function cambio() {
+    if (contador == 0) {
+      menu_flotante.innerHTML = `       <div class="container_opciones_menu">
+            <nav class="nav_opcion">
+              <ul class="categorias_opciones">
+                <h3 class="title_menu_opciones-1"> Categorias</h3>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">conjuntos</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Pantalones</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Pollera</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Vestidos</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Remeras</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Zapatos</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Pollera</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Vestidos</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Remeras</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">Zapatos</a> </li>
+              </ul>
+            </nav>
+            <nav class="nav_colores">
+              <ul class="color_opciones">
+                <h3 class="title_menu_opciones-1"> Colores</h3>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+                <li class="list_opciones_c"><a href="#" class="list_opciones_colores">colores</a>
+                  <div class="cuadrados_colores"></div>
+                </li>
+              </ul>
+            </nav>
+            <nav class="nav_talles">
+              <ul class="talle_opciones">
+                <h3 class="title_menu_opciones-1"> Talle</h3>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">36</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">38</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">40</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">42</a> </li>
+
+                <li class="list_opciones"><a href="#" class="list_opciones-1">L</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">M</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">S</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">UNICO</a> </li>
+                <li class="list_opciones"><a href="#" class="list_opciones-1">XL</a> </li>
+              </ul>
+            </nav>
+
+
+          </div>
+        </div>`;
+      menu_flotante.classList.add("opcion_cambio");
+      contador = 1;
+    } else {
+      menu_flotante.classList.remove("opcion_cambio");
+      contador = 0;
+    }
+  }
 }

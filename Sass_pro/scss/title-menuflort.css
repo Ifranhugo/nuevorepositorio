@@ -1,20 +1,25 @@
+.menu_opciones {
+  width: 95%;
+  height: 50%;
+  overflow-x: hidden;
+}
+
 .opciones_de_productos {
   width: 100%;
-  display: none;
+  display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #fff;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
   position: relative;
+  overflow: auto;
+  z-index: 1000;
 }
 
 .opciones_de_productos.opcion_cambio {
-  display: block;
-  width: 100%;
-  z-index: 5;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background: #fff;
-  position: relative;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .button_opciones {
@@ -24,11 +29,6 @@
   border: none;
   font-size: 3.5vh;
   color: var(--letra-negra);
-}
-
-.menu_opciones {
-  width: 95%;
-  height: 50%;
 }
 
 .container_opciones_menu {
@@ -41,12 +41,51 @@
           flex-direction: row;
   list-style: none;
   border-top: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.nav_talles {
+  width: 30%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.nav_colores {
+  width: 30%;
+  height: 30vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.nav_opcion {
+  width: 30%;
+  height: 50vh;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .categorias_opciones {
-  width: 40%;
-  padding-right: 20vh;
   list-style: none;
+  height: inherit;
+  font-size: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,70 +93,85 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 7vh;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 5vh;
 }
 
 .talle_opciones {
-  width: 20%;
   list-style: none;
   font-family: "Mulish", sans-serif;
   line-height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .color_opciones {
-  width: 10%;
   list-style: none;
+  height: inherit;
   line-height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.color_opciones-1 {
-  margin-top: 6.4vh;
-  width: 20%;
-  list-style: none;
-  line-height: 7vh;
+.list_opciones_colores {
+  font-size: 2.4vh;
+  font-family: "Mulish", sans-serif;
+  padding: 1vh;
+  color: var(--letra-gris);
+}
+
+.list_opciones_c :hover {
+  color: var(--letra-gris);
+  font-size: 2.6vh;
 }
 
 .list_opciones {
   font-size: 2.4vh;
   font-family: "Mulish", sans-serif;
+  padding: 3vh;
   color: var(--letra-gris);
-}
-
-.title_menu_opciones-1 h3 {
-  font-family: "Mulish", sans-serif;
 }
 
 .title_menu_opciones-1 {
   font-size: 3vh;
-  position: absolute;
+  width: 100%;
+  text-align: center;
   font-family: "Mulish", sans-serif;
-  margin-top: 1vh;
-  margin-bottom: 10vh;
-  width: 20%;
   color: var(--letra-negra);
-  padding-left: 20vh;
-  padding-right: 20vh;
 }
 
 .list_opciones-1 {
-  padding-left: 6vh;
   font-size: 2vh;
   text-decoration: none;
   font-family: "Mulish", sans-serif;
   color: var(--letra-gris);
 }
 
-.list_opciones-1 :hover {
-  color: var(--letra-gris);
-  font-size: 2.4vh;
-}
-
 .list_opciones :hover {
   color: var(--letra-gris);
-  font-size: 3vh;
+  font-size: 2.4vh;
 }
 
 .title_menu_opciones {
@@ -129,7 +183,7 @@
 .cuadrados_colores {
   height: 10px;
   width: 10px;
-  margin-right: 5vh;
+  margin-right: 3vh;
   background: blueviolet;
   display: inline-block;
 }
