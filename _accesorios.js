@@ -1,18 +1,15 @@
 import { responiveMediaMenu, hamburguerMenu, menuFloar } from "./menuJS.js";
 responiveMediaMenu();
 hamburguerMenu();
-let carrito = [];
-//funcion para el menu flotante
-
 menuFloar();
 
+let carrito = [];
 const button_cerrar_modalID = document.getElementById("button_cerrar_modalID"),
   seccionCarID = document.getElementById("seccionCarID"),
   TbodyID = document.getElementById("TbodyID"),
   Clickbuttom = document.querySelectorAll("#buttom__galeryID"),
   body_productID = document.getElementById("body_productID"),
   button_carrrID = document.getElementById("button_carrrID");
-
 button_carrrID.addEventListener("click", () => {
   seccionCarID.classList.toggle("seccionCarCambio");
 });
@@ -166,12 +163,3 @@ document.addEventListener("click", (e) => {
     );
   }
 });
-// function pasarPagina(e) {
-//   console.log("2");
-// }
-
-// $pasarMuestraId.forEach((src) => {
-//   src.addEventListener("click", pasarPagina);
-// });
-
-//---------------------------------------------

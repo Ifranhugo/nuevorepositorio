@@ -1,67 +1,74 @@
 .seccionCar {
-  height: 100vh;
+  height: 100%;
+  margin-top: 10vh;
   position: fixed;
   width: 100%;
-  background: transparent;
-  display: none;
-  justify-content: center;
+  background-color: rgba(233, 232, 231, 0.5);
+  transform: translate(-100%, 0%);
+  transition: transform 0.3s ease;
+  justify-content: flex-end;
   align-items: center;
-  top: 0;
-  left: 0;
+  display: flex;
   z-index: 1000;
+  overflow: hidden;
 }
 .seccionCarCambio {
-  height: 100vh;
-  position: fixed;
-  width: 100%;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  transform: translate(0, 0);
 }
 .contaner_con_modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vh;
-  background: rgb(192, 186, 186);
-  height: 60%;
-  z-index: 1500;
+  width: 70vh;
+  background: white;
+  flex-wrap: wrap;
+  height: 99%;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
 .containe_carrito_modal {
   z-index: 2000;
-  width: 80%;
+  width: 100%;
   height: 80%;
-  background: rgba(0, 0, 0, 0.5);
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto;
+  overflow: auto;
 }
 
 .containe_carrito_modal :target {
   display: block;
 }
-.table_carr_modal {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
+
 .thead_carr_modal {
   display: flex;
   flex-direction: row;
+  overflow: auto;
+
   justify-content: space-evenly;
 }
 .table_carr_modal td,
 th {
-  border-bottom: 1px solid white;
-  color: azure;
+  border-bottom: 1px solid black;
+  color: black;
+  font-family: "Mulish", sans-serif;
+  overflow: auto;
+}
+.title_modal_carr {
+  font-size: 4vh;
+  padding-left: 2vh;
+}
+.table_carr_modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  overflow: auto;
+}
+.precio_modd {
   font-family: "Mulish", sans-serif;
 }
 .itemCarrito td {
@@ -69,7 +76,7 @@ th {
   font-family: "Mulish", sans-serif;
 }
 .td_carrito {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   font-family: "Mulish", sans-serif;
 }
 .titlee {
@@ -82,14 +89,17 @@ th {
   display: block;
 }
 .button_cerrar_modal {
-  font-size: 3vh;
-  height: 4vh;
-  width: 7vh;
-  position: absolute;
-  margin-bottom: 53vh;
-  margin-right: 90vh;
-  background: rgb(194, 29, 29);
-  color: white;
+  font-size: 2vh;
+  position: relative;
+  margin-bottom: 0;
+  padding: 2vh;
+  margin-right: 0;
+  width: 100%;
+  height: fit-content;
+  display: block;
+  background: none;
+  color: black;
+  border: none;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -101,7 +111,7 @@ th {
   width: 40px;
   border: none;
   text-align: center;
-  outline: orangered;
+  outline: black;
   height: 20px;
 }
 .cantidad {
@@ -119,12 +129,12 @@ th {
 .h3Total {
   font-size: 3vh;
   font-family: "Mulish", sans-serif;
-  color: rgb(250, 244, 235);
+  color: black;
 }
 .ButtonComCarr {
   background: transparent;
   border: 2px solid black;
-  color: aliceblue;
+  color: black;
   font-family: "Mulish", sans-serif;
   font-size: 2.5vh;
   padding: 5px;

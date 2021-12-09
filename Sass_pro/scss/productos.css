@@ -17,8 +17,8 @@ a {
       grid-template-areas: "presentacion_productos  presentacion_productos" "img__product   img__product" "footer  footer";
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 30vh 610vh 80vh;
-      grid-template-rows: 30vh 610vh 80vh;
+  -ms-grid-rows: 30vh 370vh 80vh;
+      grid-template-rows: 30vh 370vh 80vh;
 }
 
 .footer {
