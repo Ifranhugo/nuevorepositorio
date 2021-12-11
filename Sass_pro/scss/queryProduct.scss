@@ -1,0 +1,367 @@
+@media only screen and (max-device-width: 480px) {
+  .body_product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5% 90% 21%;
+    grid-template-areas:
+      "presentacion_productos  presentacion_productos"
+      "img__product   img__product"
+      "footer  footer";
+  }
+  .title__img_cont {
+    width: 100%;
+    grid-area: title__img_cont;
+
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20%;
+    justify-content: center;
+  }
+  .inside_h1 {
+    text-align: center;
+
+    font-size: 8vh;
+
+    color: var(--rosa-titles);
+  }
+
+  //menu flotante----------------------------------------
+  .menu_opciones {
+    overflow: hidden;
+    width: 95%;
+    height: fit-content;
+    overflow-y: scroll;
+  }
+  .opciones_de_productos {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+    background: #fff;
+    transform: translate(0, -100%);
+    position: relative;
+    overflow-y: scroll;
+    z-index: 1000;
+  }
+  .opciones_de_productos.opcion_cambio {
+    transform: translate(0, 0);
+  }
+  .button_opciones {
+    padding-left: 7vh;
+    padding-right: 2vh;
+    font-family: "Mulish", sans-serif;
+    border: none;
+    font-size: 3.5vh;
+    color: var(--letra-negra);
+  }
+
+  .container_opciones_menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border-top: none;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .nav_talles {
+    width: 100%;
+    height: 26vh;
+    display: flex;
+    overflow: hidden;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  .nav_colores {
+    width: 100%;
+    height: 26vh;
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  .nav_opcion {
+    width: 100%;
+    height: 26vh;
+    overflow: hidden;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    display: flex;
+  }
+  //----------------------------INICIO PRODUCTOS
+  .img__product {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .container-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .foto_product {
+    height: 14%;
+    width: 42%;
+    text-align: center;
+    box-shadow: 3px 3px 5px #e5e7e9;
+    position: relative;
+  }
+  .button_carrr {
+    text-align: center;
+    height: 4.5vh;
+  }
+
+  .foto-galeria-1 {
+    width: 100%;
+    height: 25vh;
+  }
+  .info-galeria {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .title_galeria {
+    font-size: 2.3vh;
+    color: var(--letra-gris);
+    margin-top: 3vh;
+    margin-bottom: 1.5vh;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+  }
+  .precio_original {
+    font-size: 2.3vh;
+    text-align: center;
+    margin: 0%;
+    display: inline-block;
+    font-family: "Mulish", sans-serif;
+  }
+  .precio_rebaja {
+    font-size: 2vh;
+    text-align: center;
+    display: inline-block;
+    color: var(--letra-gris);
+    font-family: "Mulish", sans-serif;
+    margin: 0%;
+    margin-top: 1vh;
+  }
+
+  .carrLog {
+    margin-left: 5vh;
+  }
+  .off_porciento {
+    height: fit-content;
+    display: block;
+    text-align: center;
+    margin-left: 0%;
+    color: #ebedef;
+    font-family: "Montserrat", sans-serif;
+    width: 7vh;
+    background-color: var(--rosa-fuerte);
+  }
+  .off_porciento p {
+    font-size: 2.5vh;
+  }
+  .buttom__galery {
+    font-size: 1vh;
+    font-family: "Mulish", sans-serif;
+    color: var(--letra-gris);
+  }
+  .carrto__comprar {
+    top: 45%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #ebedef;
+    opacity: 1;
+    cursor: pointer;
+    position: absolute;
+  }
+  .carrto__comprar button {
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    font-size: 1.6vh;
+    overflow: hidden;
+  }
+  .carrto__comprar i {
+    font-size: 2vh;
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  .img__product :hover ~ .carrto__comprar {
+    display: flex;
+  }
+  .alertCarr {
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    z-index: 2000;
+    border-radius: 15px 15px 15px 15px;
+    background: #588ec4;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transform: translatey(-300px);
+    transition: 0.5s;
+  }
+  .alertCarr h4 {
+    font-size: 3vh;
+    margin-left: 3vh;
+    font-family: "Mulish", sans-serif;
+    color: white;
+  }
+  .seccionCar {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .seccionCarCambio {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .contaner_con_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vh;
+    background: rgb(192, 186, 186);
+    height: 100%;
+    z-index: 1500;
+  }
+
+  .containe_carrito_modal {
+    z-index: 2000;
+    width: 90%;
+    height: 90%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  .containe_carrito_modal :target {
+    display: block;
+  }
+  .table_carr_modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .thead_carr_modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .table_carr_modal td,
+  th {
+    border-bottom: 1px solid black;
+    color: black;
+    font-family: "Mulish", sans-serif;
+  }
+  .itemCarrito td {
+    margin: 5vh;
+    font-family: "Mulish", sans-serif;
+  }
+  .td_carrito {
+    border-bottom: 1px solid black;
+    font-family: "Mulish", sans-serif;
+  }
+  .titlee {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.3vh;
+  }
+  .containe_carrito_modal.containe_modalCambio {
+    width: fit-content;
+    height: 30vh;
+    background: rgb(24, 20, 20);
+    display: block;
+    position: relative;
+  }
+  .button_cerrar_modal {
+    font-size: 2vh;
+    position: relative;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;
+    height: fit-content;
+    display: block;
+    background: none;
+    color: black;
+    border: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .title_modal_carr {
+    font-size: 4vh;
+  }
+  .img_carr {
+    width: 50px;
+    height: auto;
+  }
+  .input_carr {
+    width: 20px;
+    border: none;
+    text-align: center;
+    outline: orangered;
+    height: 20px;
+  }
+  .precio_modd {
+    font-size: 2vh;
+    font-family: "Mulish", sans-serif;
+  }
+  .cantidad {
+    width: 10%;
+  }
+  .button_eliminar_modal {
+    text-align: center;
+  }
+  .TotalCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .h3Total {
+    font-size: 3vh;
+    font-family: "Mulish", sans-serif;
+    color: black;
+  }
+  .ButtonComCarr {
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    font-family: "Mulish", sans-serif;
+    font-size: 2.5vh;
+    padding: 5px;
+  }
+}

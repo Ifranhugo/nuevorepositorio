@@ -1,25 +1,17 @@
-let efecto_menu = document.getElementById("efecto_buttom");
-let menu_flotante = document.getElementById("opciones_en_js");
-let contador = 0;
+import { responiveMediaMenu, hamburguerMenu, menuFloar } from "./menuJS.js";
+responiveMediaMenu();
+hamburguerMenu();
 let carrito = [];
 //funcion para el menu flotante
-function cambio() {
-  if (contador == 0) {
-    menu_flotante.classList.add("opcion_cambio");
-    contador = 1;
-  } else {
-    menu_flotante.classList.remove("opcion_cambio");
-    contador = 0;
-  }
-}
-efecto_menu.addEventListener("click", cambio, true);
-const button_cerrar_modalID = document.getElementById("button_cerrar_modalID");
-const seccionCarID = document.getElementById("seccionCarID");
-const TbodyID = document.getElementById("TbodyID");
-const Clickbuttom = document.querySelectorAll("#buttom__galeryID");
-let body_productID = document.getElementById("body_productID");
 
-const button_carrrID = document.getElementById("button_carrrID");
+menuFloar();
+
+const button_cerrar_modalID = document.getElementById("button_cerrar_modalID"),
+  seccionCarID = document.getElementById("seccionCarID"),
+  TbodyID = document.getElementById("TbodyID"),
+  Clickbuttom = document.querySelectorAll("#buttom__galeryID"),
+  body_productID = document.getElementById("body_productID"),
+  button_carrrID = document.getElementById("button_carrrID");
 
 button_carrrID.addEventListener("click", () => {
   seccionCarID.classList.toggle("seccionCarCambio");
@@ -30,14 +22,13 @@ button_cerrar_modalID.addEventListener("click", () => {
 Clickbuttom.forEach((btn) => {
   btn.addEventListener("click", CarritoItem);
 });
-
 //funcion para  recorrer los botones del carrito
 function CarritoItem(ev) {
-  const button = ev.target;
-  const item = button.closest(".foto_product");
-  const itemTitle = item.querySelector(".title_galeria").textContent;
-  const itemPrice = item.querySelector(".precio_original").textContent;
-  const itemImag = item.querySelector(".foto-galeria-1").src;
+  const button = ev.target,
+    item = button.closest(".foto_product"),
+    itemTitle = item.querySelector(".title_galeria").textContent,
+    itemPrice = item.querySelector(".precio_original").textContent,
+    itemImag = item.querySelector(".foto-galeria-1").src;
   //objeto para las variables del carrito y con el metodo para ejecutarlo
   const newItem = {
     title: itemTitle,
@@ -83,7 +74,9 @@ function renderCarrito() {
               <td>
                 <h6 class="titlee">${item.title}</h6>
               </td>
-              <td>${item.precio}</td>
+              <td>
+                <h6 class="precio_modd">${item.precio}</h6>
+              </td>
               <td classe ="cantidad">
                 <input type="number"  min ="1" class= "input_carr" value=${item.cantidad}>
               </td>
@@ -113,9 +106,9 @@ function TotalCarr() {
 }
 //funcion para remover los productos del carrito
 function removeItemCarrito(e) {
-  const buttomDelete = e.target;
-  const tr = buttomDelete.closest(".itemCarrito");
-  const tituloRemove = tr.querySelector(".titlee").textContent;
+  const buttomDelete = e.target,
+    tr = buttomDelete.closest(".itemCarrito"),
+    tituloRemove = tr.querySelector(".titlee").textContent;
   for (let ir = 0; ir < carrito.length; ir++) {
     if (carrito[ir].title.trim() === tituloRemove.trim()) {
       carrito.splice(ir, 1);
@@ -156,12 +149,9 @@ window.onload = function (params) {
     renderCarrito();
   }
 };
-const $pasarMuestraId = document.querySelector(".a_fotogalery");
-const foto_galeria_1 = document.querySelector(".foto-galeria-1");
-
+const $pasarMuestraId = document.querySelector(".a_fotogalery"),
+  foto_galeria_1 = document.querySelector(".foto-galeria-1");
 document.addEventListener("click", (e) => {
-  console.log("le diste click a ", e.target);
-
   if (e.target.matches(".a_fotogalery")) {
     let infor = e.target;
     const idproductos = infor.closest("#foto_productID");
@@ -176,7 +166,6 @@ document.addEventListener("click", (e) => {
     );
   }
 });
-
 // function pasarPagina(e) {
 //   console.log("2");
 // }
@@ -184,3 +173,5 @@ document.addEventListener("click", (e) => {
 // $pasarMuestraId.forEach((src) => {
 //   src.addEventListener("click", pasarPagina);
 // });
+
+//---------------------------------------------

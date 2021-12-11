@@ -1,0 +1,105 @@
+[
+  {
+    "id": "1",
+    "nombrePro": "CAMIZA GINZA",
+    "precioOriginal": "4,850.00",
+    "precioDescuento": "4,000",
+    "img1": "muestra-ginza.jpg",
+    "img2": "camiza-ginza.jpg"
+  },
+  {
+    "id": "2",
+    "nombrePro": "BUZO DESTINI",
+    "precioOriginal": "3,900.00",
+    "precioDescuento": "5,070.00 ",
+    "img1": "muestra_6_1.jpg",
+    "img2": "muestra_6_2.jpg",
+    "img3": "muestra_6_3.jpg"
+  },
+  {
+    "id": "3",
+    "nombrePro": "FALDA GREEK",
+    "precioOriginal": "3,200.00",
+    "precioDescuento": "3,100.00",
+    "img1": "muestra_27_1.png",
+    "img2": "muestra_27_2.png",
+    "img3": "muestra_27_3.jpg"
+  },
+  {
+    "id": "4",
+    "nombrePro": "FALDA TEJIDA",
+    "precioOriginal": "2,450.00",
+    "precioDescuento": "408,33 ",
+    "img1": "muestra_25_1.png",
+    "img2": "muestra_25_2.png"
+  },
+  {
+    "id": "5",
+    "nombrePro": "FALDA MIDI SATIN",
+    "precioOriginal": "3,940.00",
+    "precioDescuento": "5.200 ",
+    "img1": "muestra_26_1.jpeg",
+    "img2": "muestra_26_2.jpg"
+  },
+  {
+    "id": "6",
+    "nombrePro": "CHALECO SUMMER",
+    "precioOriginal": "14,500.00",
+    "precioDescuento": "1,450.00 ",
+    "img1": "muestra_29_1.jpeg",
+    "img2": "muestra_29_2.jpeg",
+    "img3": "muestra_29_3.jpeg"
+  },
+  {
+    "id": "7",
+    "nombrePro": "CAMISA MYKONOS MOSTAZA",
+    "precioOriginal": "3,100.00",
+    "precioDescuento": "2,390.00 ",
+    "img1": "muestra_30_1.jpeg",
+    "img2": "muestra_30_2.jpeg",
+    "img3": "muestra_30_3.jpeg"
+  },
+  {
+    "id": "8",
+    "nombrePro": "CAMISA VESTIDO TROPICAL",
+    "precioOriginal": "6,000.00",
+    "precioDescuento": "1.000",
+    "img1": "muestra_31_1.jpeg",
+    "img2": "muestra_31_2.jpeg",
+    "img3": "muestra_31_3.jpeg"
+  },
+  {
+    "id": "9",
+    "nombrePro": "VESTIDO ATICO ZEBRA",
+    "precioOriginal": "6,800.00",
+    "precioDescuento": "1.133,33",
+    "img1": "muestra_32_1.jpg",
+    "img3": "galeria_32.jpg"
+  },
+  {
+    "id": "10",
+    "nombrePro": "VESTIDO ATICO",
+    "precioOriginal": "9,500.00",
+    "precioDescuento": "4,500.00 ",
+    "img1": "muestra_33_1.jpg",
+    "img2": "muestra_33_2.jpg",
+    "img3": "muestra_33_3.jpg"
+  },
+  {
+    "id": "11",
+    "nombrePro": "JEAN PATCHES",
+    "precioOriginal": "6,900.00",
+    "precioDescuento": "4,250.00",
+    "img1": "muestra_34_1.jpg",
+    "img2": "muestra_34_2.jpg",
+    "img3": "muestra_34_3.jpg"
+  },
+  {
+    "id": "12",
+    "nombrePro": "JOGGIN LOVE BLANCO",
+    "precioOriginal": "3,375.00",
+    "precioDescuento": "4,250.00",
+    "img1": "muestra_35_1.jpg",
+    "img2": "muestra_35_2.jpg"
+  }
+]
