@@ -158,3 +158,37 @@ export function menuFloar() {
     }
   }
 }
+//-----------------------CARGAR PRODUCTOS
+
+async function CargarProduct() {
+  let insertProduct = querySelector(".insertProduct");
+  fetch("produc_accesorios.json")
+    .then((res) => res.json())
+    .then((datos) => {
+      let storeej = [];
+      storeej.push(JSON.parse(localStorage.getItem("productoNu")));
+      console.log(storeej[0][0][1]);
+      let nombreComparador = storeej[0][0][1];
+      console.log(nombreComparador);
+      datos.forEach((producto) => {
+        if (producto.precioOriginal == nombreComparador.replace("$", "")) {
+          insertProduct.innerHTML = `
+  <div class="foto_product" id="foto_productID">
+        <a href="./muestra_producto.html">
+          <img class="foto-galeria-1 a_fotogalery" src="" alt=""></a>
+        <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
+            al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
+        <div class="info-galeria">
+          <h3 class="title_galeria">${producto.nombrePro}</h3>
+          <h4 class="precio_original" id="title_galeriaID">$${producto.precioOriginal}</h4>
+          <del class="precio_rebaja">$${producto.precioDescuento}</del>
+          <div class="off_porciento">
+            <p>-30%</p>
+          </div>
+        </div>
+      </div>
+      `;
+        }
+      });
+    });
+}
