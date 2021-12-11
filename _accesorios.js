@@ -1,8 +1,13 @@
-import { responiveMediaMenu, hamburguerMenu, menuFloar } from "./menuJS.js";
+import {
+  responiveMediaMenu,
+  hamburguerMenu,
+  menuFloar,
+  CargarProduct,
+} from "./menuJS.js";
 responiveMediaMenu();
 hamburguerMenu();
 menuFloar();
-
+CargarProduct();
 let carrito = [];
 const button_cerrar_modalID = document.getElementById("button_cerrar_modalID"),
   seccionCarID = document.getElementById("seccionCarID"),
