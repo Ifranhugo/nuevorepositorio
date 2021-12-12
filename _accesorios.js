@@ -31,5 +31,3 @@ document.addEventListener("click", (e) => {
     );
   }
 });
-var dat = !!document.getElementById("bodyproductID");
-console.log(dat);
