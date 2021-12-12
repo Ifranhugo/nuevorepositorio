@@ -324,17 +324,34 @@ export function CargarProduct() {
             });
           }
           // guardar al localstorage
+          document.addEventListener("click", (e) => {
+            console.log("agregando");
+            if (e.target.matches(".a_fotogalery")) {
+              let infor = e.target;
+              const idproductos = infor.closest("#foto_productID");
+              const idProduct =
+                idproductos.querySelector("#title_galeriaID").textContent;
+              const newElemen = {
+                precioP: idProduct,
+              };
+              console.log(Object.entries(newElemen));
+              localStorage.setItem(
+                "productoNu",
+                JSON.stringify(Object.entries(newElemen))
+              );
+            }
+          });
           function addlocalStorage() {
             localStorage.setItem("carrito", JSON.stringify(carrito));
           }
-          window.onload = function (params) {
-            const storage = JSON.parse(localStorage.getItem("carrito"));
-            if (storage) {
-              carrito = storage;
-              renderCarrito();
-            }
-          };
         });
+        window.onload = function (params) {
+          const storage = JSON.parse(localStorage.getItem("carrito"));
+          if (storage) {
+            carrito = storage;
+            renderCarrito();
+          }
+        };
       });
   } else if (dat == false) {
     let carrito = [];
@@ -499,17 +516,34 @@ export function CargarProduct() {
             });
           }
           // guardar al localstorage
-          function addlocalStorage() {
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-          }
-          window.onload = function (params) {
-            const storage = JSON.parse(localStorage.getItem("carrito"));
-            if (storage) {
-              carrito = storage;
-              renderCarrito();
+          document.addEventListener("click", (e) => {
+            console.log("agregando");
+            if (e.target.matches(".a_fotogalery")) {
+              let infor = e.target;
+              const idproductos = infor.closest("#foto_productID");
+              const idProduct =
+                idproductos.querySelector("#title_galeriaID").textContent;
+              const newElemen = {
+                precioP: idProduct,
+              };
+              console.log(Object.entries(newElemen));
+              localStorage.setItem(
+                "productoNu",
+                JSON.stringify(Object.entries(newElemen))
+              );
             }
-          };
+          });
         });
+        function addlocalStorage() {
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+        }
+        window.onload = function (params) {
+          const storage = JSON.parse(localStorage.getItem("carrito"));
+          if (storage) {
+            carrito = storage;
+            renderCarrito();
+          }
+        };
       });
   }
 }
