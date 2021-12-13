@@ -361,6 +361,7 @@ export function CargarProduct() {
     //---------------------------------------------------------------------------------------------
   } else if (dat == false) {
     let carrito = [];
+
     let insertProduct = document.querySelector(".insertProduct");
     fetch("datosJson.json")
       .then((res) => res.json())
@@ -398,6 +399,7 @@ export function CargarProduct() {
             seccionCarID.classList.remove("seccionCarCambio");
           });
           Clickbuttom.forEach((btn) => {
+            console.log("cargar");
             btn.addEventListener("click", CarritoItem);
           });
           //funcion para  recorrer los botones del carrito
