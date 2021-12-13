@@ -79,7 +79,6 @@ export function hamburguerMenu(panel_btn, panel_hambur) {
   });
   d.addEventListener("DOMContentLoaded", (e) => {
     hamburguerMenu(".panel_btn", ".panel_hambur");
-    console.log("hola");
   });
 }
 //------------------------------------MENU FLOTANTE
@@ -571,9 +570,7 @@ export function cargarMuestra(pagina, lcstrage) {
     .then((datos) => {
       let storeej = [];
       storeej.push(JSON.parse(localStorage.getItem(lcstrage)));
-      console.log(storeej[0][0][1]);
       let nombreComparador = storeej[0][0][1];
-      console.log(nombreComparador);
       datos.forEach((producto) => {
         if (producto.precioOriginal == nombreComparador.replace("$", "")) {
           container__product_imgID.innerHTML = `
@@ -596,9 +593,7 @@ export function cargarMuestra(pagina, lcstrage) {
     .then((datos) => {
       let storeej = [];
       storeej.push(JSON.parse(localStorage.getItem(lcstrage)));
-      console.log(storeej[0][0][1]);
       let nombreComparador = storeej[0][0][1];
-      console.log(nombreComparador);
       datos.forEach((producto) => {
         if (producto.precioOriginal == nombreComparador.replace("$", "")) {
           formu_infoID.innerHTML += `
@@ -652,6 +647,5 @@ export function cargarMuestra(pagina, lcstrage) {
       `;
         }
       });
-      console.log(storeej);
     });
 }
