@@ -164,7 +164,7 @@ export function CargarProduct() {
   if (dat === true) {
     let carrito = [];
     let insertProduct = document.querySelector(".insertProduct");
-    fetch("produc_accesorios.json")
+    fetch("./produc_accesorios.json")
       .then((res) => res.json())
       .then((datos) => {
         datos.forEach((producto) => {
@@ -394,12 +394,13 @@ export function CargarProduct() {
           button_carrrID.addEventListener("click", () => {
             seccionCarID.classList.toggle("seccionCarCambio");
           });
-
+          function addlocalStorage() {
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+          }
           button_cerrar_modalID.addEventListener("click", () => {
             seccionCarID.classList.remove("seccionCarCambio");
           });
           Clickbuttom.forEach((btn) => {
-            console.log("cargar");
             btn.addEventListener("click", CarritoItem);
           });
           //funcion para  recorrer los botones del carrito
@@ -518,8 +519,6 @@ export function CargarProduct() {
                 Suma.value < 1 ? (Suma.value = 1) : Suma.value;
                 item.cantidad = Suma.value;
                 TotalCarr();
-              } else {
-                console.log("no entro");
               }
             });
           }
