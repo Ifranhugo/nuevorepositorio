@@ -14,6 +14,12 @@
   display: inline-block;
   padding: 4vh;
 }
+.img_muestra_p {
+  max-width: 381px;
+  height: 576px;
+
+  /*   box-shadow: 10px 10px 10px 10px; */
+}
 
 .title_formu_info {
   font-size: 4vh;
@@ -23,11 +29,10 @@
 }
 .off_porciento {
   display: inline-block;
+  margin-left: 9%;
 }
 .precio_original {
   font-size: 4.5vh;
-}
-.colores_formu {
 }
 .color_formu_ {
   font-size: 4vh;

@@ -158,6 +158,7 @@ export function menuFloar() {
   }
 }
 //-----------------------CARGAR PRODUCTOS
+//ACCESORIOS
 export function CargarProduct() {
   let dat = !!document.querySelector(".body_productAcce");
   console.log(dat);
@@ -169,10 +170,9 @@ export function CargarProduct() {
       .then((datos) => {
         datos.forEach((producto) => {
           insertProduct.innerHTML += `
-        
     <div class="foto_product  ${producto.id}" id="foto_productID">
         <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./imagenes axesorios/${producto.img1}" alt=""></a>
+          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -325,7 +325,6 @@ export function CargarProduct() {
           }
           // guardar al localstorage
           document.addEventListener("click", (e) => {
-            console.log("agregando");
             if (e.target.matches(".a_fotogalery")) {
               let infor = e.target;
               const idproductos = infor.closest("#foto_productID");
@@ -334,25 +333,33 @@ export function CargarProduct() {
               const newElemen = {
                 precioP: idProduct,
               };
+
               console.log(Object.entries(newElemen));
               localStorage.setItem(
-                "productoNu",
+                "productoACC",
                 JSON.stringify(Object.entries(newElemen))
               );
             }
           });
+          localStorage.removeItem("productoACC");
+          const asincronaFuncion = async () => {
+            try {
+              const storage = JSON.parse(localStorage.getItem("carrito"));
+              if (storage) {
+                carrito = storage;
+                await renderCarrito();
+              }
+            } catch (error) {
+              console.error("error carr");
+            }
+          };
+          window.onload = asincronaFuncion();
           function addlocalStorage() {
             localStorage.setItem("carrito", JSON.stringify(carrito));
           }
         });
-        window.onload = function (params) {
-          const storage = JSON.parse(localStorage.getItem("carrito"));
-          if (storage) {
-            carrito = storage;
-            renderCarrito();
-          }
-        };
       });
+    //---------------------------------------------------------------------------------------------
   } else if (dat == false) {
     let carrito = [];
     let insertProduct = document.querySelector(".insertProduct");
@@ -364,7 +371,7 @@ export function CargarProduct() {
         
     <div class="foto_product  ${producto.id}" id="foto_productID">
         <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./imagenes-muestra/${producto.img1}" alt=""></a>
+          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -517,7 +524,6 @@ export function CargarProduct() {
           }
           // guardar al localstorage
           document.addEventListener("click", (e) => {
-            console.log("agregando");
             if (e.target.matches(".a_fotogalery")) {
               let infor = e.target;
               const idproductos = infor.closest("#foto_productID");
@@ -526,24 +532,126 @@ export function CargarProduct() {
               const newElemen = {
                 precioP: idProduct,
               };
+              document.addEventListener("DOMContentLoaded", () => {
+                localStorage.removeItem("productoNu");
+              });
               console.log(Object.entries(newElemen));
               localStorage.setItem(
                 "productoNu",
                 JSON.stringify(Object.entries(newElemen))
               );
             }
+            const asincronaFuncion = async () => {
+              try {
+                const storage = JSON.parse(localStorage.getItem("carrito"));
+                if (storage) {
+                  carrito = storage;
+                  await renderCarrito();
+                }
+              } catch (error) {
+                console.error("error carr");
+              }
+            };
+            window.onload = asincronaFuncion();
           });
         });
-        function addlocalStorage() {
-          localStorage.setItem("carrito", JSON.stringify(carrito));
-        }
-        window.onload = function (params) {
-          const storage = JSON.parse(localStorage.getItem("carrito"));
-          if (storage) {
-            carrito = storage;
-            renderCarrito();
-          }
-        };
       });
   }
+  localStorage.removeItem("productoNu");
+}
+//-----------------------------------------------------------------------------------------------------
+
+export function cargarMuestra(pagina, lcstrage) {
+  let formu_infoID = document.getElementById("formu_infoID"),
+    container__product_imgID = document.getElementById(
+      "container__product_imgID"
+    );
+  fetch(pagina)
+    .then((res) => res.json())
+    .then((datos) => {
+      let storeej = [];
+      storeej.push(JSON.parse(localStorage.getItem(lcstrage)));
+      console.log(storeej[0][0][1]);
+      let nombreComparador = storeej[0][0][1];
+      console.log(nombreComparador);
+      datos.forEach((producto) => {
+        if (producto.precioOriginal == nombreComparador.replace("$", "")) {
+          container__product_imgID.innerHTML = `
+    <div class="muestra_product_img">
+        <img class="img_muestra_p"   src="./${producto.img1}" alt="">
+      </div>
+      <div class="muestra_product_img">
+        <img class="img_muestra_p" src="./${producto.img2}" alt="">
+      </div>
+      <div class="muestra_product_img">
+        <img class="img_muestra_p"  src="./${producto.img3}" alt="">
+      </div>
+      `;
+        }
+      });
+    });
+
+  fetch(pagina)
+    .then((res) => res.json())
+    .then((datos) => {
+      let storeej = [];
+      storeej.push(JSON.parse(localStorage.getItem(lcstrage)));
+      console.log(storeej[0][0][1]);
+      let nombreComparador = storeej[0][0][1];
+      console.log(nombreComparador);
+      datos.forEach((producto) => {
+        if (producto.precioOriginal == nombreComparador.replace("$", "")) {
+          formu_infoID.innerHTML += `
+      <div class="formu_info">   
+        <h2 class="title_formu_info">${producto.nombrePro}</h2>
+        <div class="off_porciento">
+          <p>-30%</p>
+        </div>
+        <h4 class="precio_original">precio  $${producto.precioOriginal}</h4>
+          <del class="precio_rebaja">  $${producto.precioDescuento}</del>
+        </div>
+      <div class="colores_formu">
+        <h4 class="color_formu_">Color</h4>
+        <div class="cuadrados_colores_formu   amarillo_1"></div>
+        <div class="cuadrados_colores_formu   azul_1"></div>
+        <div class="cuadrados_colores_formu   negro_1"></div>
+      </div>
+      <div class="talles_formul_muestra">
+        <h4 class="ttitle_talles_formu">Talles</h4>
+        <div class="cuadra_talles_formu">
+          <p>XS</p>
+        </div>
+        <div class="cuadra_talles_formu">
+          <p>S</p>
+        </div>
+        <div class="cuadra_talles_formu">
+          <p>M</p>
+        </div>
+        <div class="cuadra_talles_formu">
+          <p>L</p>
+        </div>
+      </div>
+       <div class="agre_bolsa_formu">
+        <div class="buttom_bolsa_formu"><button class="buTTOM_bolsa">
+            <p class="text_carrito"> agregar al carrito</p>
+          </button></div>
+      </div>
+      <div class="envio_bolsa_formu">
+        <h4 class="buttom_envios_formu">Envio y devoluciones
+        </h4>
+        <div class="devoluciones_formu_container">
+          <p class="title_devoluciones_formu">DEVOLUCIONES GRATIS</p>
+          <p class="text_devoluciones_formu">
+            Dispones de 1 mes para devolver tus artículos: con la etiqueta de devolución que encontrarás en tu
+            cuenta. No se aceptan
+            devoluciones en tiendas físicas ni outlets. Los artículos personalizados y la ropa interior no se pueden
+            devolver.
+          </p>
+        </div>
+      
+      `;
+        }
+      });
+      console.log(storeej);
+    });
 }
