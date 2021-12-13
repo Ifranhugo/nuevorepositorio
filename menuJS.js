@@ -394,9 +394,7 @@ export function CargarProduct() {
           button_carrrID.addEventListener("click", () => {
             seccionCarID.classList.toggle("seccionCarCambio");
           });
-          function addlocalStorage() {
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-          }
+
           button_cerrar_modalID.addEventListener("click", () => {
             seccionCarID.classList.remove("seccionCarCambio");
           });
@@ -532,28 +530,30 @@ export function CargarProduct() {
               const newElemen = {
                 precioP: idProduct,
               };
-              document.addEventListener("DOMContentLoaded", () => {
-                localStorage.removeItem("productoNu");
-              });
+
               console.log(Object.entries(newElemen));
               localStorage.setItem(
                 "productoNu",
                 JSON.stringify(Object.entries(newElemen))
               );
             }
-            const asincronaFuncion = async () => {
-              try {
-                const storage = JSON.parse(localStorage.getItem("carrito"));
-                if (storage) {
-                  carrito = storage;
-                  await renderCarrito();
-                }
-              } catch (error) {
-                console.error("error carr");
-              }
-            };
-            window.onload = asincronaFuncion();
           });
+          localStorage.removeItem("productoNu");
+          const asincronaFuncion = async () => {
+            try {
+              const storage = JSON.parse(localStorage.getItem("carrito"));
+              if (storage) {
+                carrito = storage;
+                await renderCarrito();
+              }
+            } catch (error) {
+              console.error("error carr");
+            }
+          };
+          window.onload = asincronaFuncion();
+          function addlocalStorage() {
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+          }
         });
       });
   }
