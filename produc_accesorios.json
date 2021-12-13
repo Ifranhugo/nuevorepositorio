@@ -4,102 +4,107 @@
     "nombrePro": "SOBRE BILLETERA PITON",
     "precioOriginal": "4,140.00",
     "precioDescuento": "6,900",
-    "img1": "imagen1.jpg",
-    "img2": "camiza-ginza.jpg"
+    "img1": "/imagenes axesorios/imagen1.jpg",
+    "img2": "/imagenes axesorios/imagen1_2.jpg",
+    "img3": "/imagenes axesorios/imagen1_3.jpg"
   },
   {
     "id": "pro2",
     "nombrePro": "CARTERA TOTE KAIA GRANDE",
     "precioOriginal": "29,900.00",
     "precioDescuento": "32,070.00 ",
-    "img1": "imagen2.jpg",
-    "img2": "muestra_6_2.jpg",
-    "img3": "muestra_6_3.jpg"
+    "img1": "/imagenes axesorios/imagen2.jpg",
+    "img2": "/imagenes axesorios/imagen2_2.jpg",
+    "img3": "/imagenes axesorios/imagen2_3.jpg"
   },
   {
     "id": "pro3",
     "nombrePro": "BANDOLERA ZIGGY ROCK",
     "precioOriginal": "22,900.00",
     "precioDescuento": "25,100.00",
-    "img1": "imagen3.jpg",
-    "img2": "muestra_27_2.jpg",
-    "img3": "muestra_27_3.jpg"
+    "img1": "/imagenes axesorios/imagen3.jpg",
+    "img2": "/imagenes axesorios/imagen3_2.jpg",
+    "img3": "/imagenes axesorios/imagen3_3.jpg"
   },
   {
     "id": "pro4",
     "nombrePro": "BOLSO FLAT FLORIAN",
     "precioOriginal": "2,500.00",
     "precioDescuento": "3,000.00",
-    "img1": "imagen4.jpg",
-    "img2": "muestra_25_2.jpg"
+    "img1": "/imagenes axesorios/imagen4.jpg",
+    "img2": "/imagenes axesorios/imagen4_2.jpg",
+    "img3": "/imagenes axesorios/imagen4_3.jpg"
   },
   {
     "id": "pro5",
     "nombrePro": "BOLSO RIO FLORIAN",
     "precioOriginal": "9,900.00",
     "precioDescuento": "10.200 ",
-    "img1": "imagen5.jpg",
-    "img2": "muestra_26_2.jpg"
+    "img1": "/imagenes axesorios/imagen5.jpg",
+    "img2": "/imagenes axesorios/imagen5_2.jpg",
+    "img3": "/imagenes axesorios/imagen5_2.jpg"
   },
   {
     "id": "pro6",
     "nombrePro": "CARTERA SUMMER",
     "precioOriginal": "19,500.00",
     "precioDescuento": "20,450.00 ",
-    "img1": "imagen6.jpg",
-    "img2": "muestra_29_2.jpg",
-    "img3": "muestra_29_3.jpg"
+    "img1": "/imagenes axesorios/imagen6.jpg",
+    "img2": "/imagenes axesorios/imagen6_2.jpg",
+    "img3": "/imagenes axesorios/imagen6_2.jpg"
   },
   {
     "id": "pro7",
     "nombrePro": "BANDOLERA CRYSTAL METAL",
     "precioOriginal": "9,900.00",
     "precioDescuento": "10,390.00 ",
-    "img1": "imagen7.jpg",
-    "img2": "muestra_30_2.jpg",
-    "img3": "muestra_30_3.jpg"
+    "img1": "/imagenes axesorios/imagen7.jpg",
+    "img2": "/imagenes axesorios/imagen7_2.jpg",
+    "img3": "/imagenes axesorios/imagen7_3.jpg"
   },
   {
     "id": "pro8",
     "nombrePro": "BILLETERA GRANDE SNAKE",
     "precioOriginal": "9,900.00",
     "precioDescuento": "10.400",
-    "img1": "imagen8.jpg",
-    "img2": "muestra_31_2.jpg",
-    "img3": "muestra_31_3.jpg"
+    "img1": "/imagenes axesorios/imagen8.jpg",
+    "img2": "/imagenes axesorios/imagen8_2.jpg",
+    "img3": "/imagenes axesorios/imagen8_3.jpg"
   },
   {
     "id": "pro9",
     "nombrePro": "SOBRE BILL",
     "precioOriginal": "6,800.00",
     "precioDescuento": "7.233,33",
-    "img1": "imagen9.jpg",
-    "img3": "galeria_32.jpg"
+    "img1": "/imagenes axesorios/imagen9.jpg",
+    "img2": "/imagenes axesorios/imagen9_2.jpg",
+    "img3": "/imagenes axesorios/imagen9_3.jpg"
   },
   {
     "id": "pro10",
     "nombrePro": "PULSERA MACRAME SUMMER",
     "precioOriginal": "2,900.00",
     "precioDescuento": "3,200.00 ",
-    "img1": "imagen10.jpg",
-    "img2": "muestra_33_2.jpg",
-    "img3": "muestra_33_3.jpg"
+    "img1": "/imagenes axesorios/imagen10.jpg",
+    "img2": "/imagenes axesorios/imagen10_2.jpg",
+    "img3": "/imagenes axesorios/imagen10_3.jpg"
   },
   {
     "id": "pro11",
     "nombrePro": "COLLAR JIMI ROCK",
     "precioOriginal": "4,500.00",
     "precioDescuento": "4,950.00",
-    "img1": "imagen11.jpg",
-    "img2": "muestra_34_2.jpg",
-    "img3": "muestra_34_3.jpg"
+    "img1": "/imagenes axesorios/imagen11.jpg",
+    "img2": "/imagenes axesorios/imagen11_2.jpg",
+    "img3": "/imagenes axesorios/imagen11_3.jpg"
   },
   {
     "id": "pro12",
     "nombrePro": "COLLAR LUCIA",
     "precioOriginal": "3,975.00",
     "precioDescuento": "4,250.00",
-    "img1": "imagen12.jpg",
-    "img2": "muestra_35_2.jpg"
+    "img1": "/imagenes axesorios/imagen12.jpg",
+    "img2": "/imagenes axesorios/imagen12_2.jpg",
+    "img3": "/imagenes axesorios/imagen12_2.jpg"
   }
 ]
