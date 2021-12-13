@@ -1,12 +1,6 @@
-import {
-  responiveMediaMenu,
-  hamburguerMenu,
-  cargarMuestra,
-  CargarProduct,
-} from "./menuJS.js";
+import { responiveMediaMenu, hamburguerMenu, cargarMuestra } from "./menuJS.js";
 responiveMediaMenu();
 hamburguerMenu();
-CargarProduct();
 let button_carrrID = document.getElementById("button_carrrID");
 button_carrrID.addEventListener("click", () => {
   seccionCarID.classList.toggle("seccionCarCambio");
