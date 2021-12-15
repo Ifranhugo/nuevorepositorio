@@ -2516,7 +2516,7 @@ td {
       grid-template-rows: 15vh 110vh 60vh 70vh;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "separador   separador" "tablaCarrito   tablaCarrito" "suma_de_precios   suma_de_precios" "footer    footer";
+      grid-template-areas: "separador   separador" "tablaCarrito   TotalCompra" "suma_de_precios   suma_de_precios" "footer    footer";
 }
 
 .separador {
@@ -2529,8 +2529,12 @@ td {
 .tablaCarrito {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: tablaCarrito;
+  border: 1px solid black;
+}
+
+.TotalCompra {
+  border: 1px solid violet;
 }
 
 .suma_de_precios {
@@ -2543,7 +2547,7 @@ td {
 
 .container_carrito {
   height: 27%;
-  width: 35%;
+  width: 85%;
   margin: auto;
   border: 1px solid black;
   display: -webkit-box;
@@ -2553,13 +2557,46 @@ td {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.especificaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: start;
+  border: 1px solid rebeccapurple;
+}
+
+.nombre_esp {
+  margin: 2px;
+  font-size: 135%;
+  font-family: "Roboto", sans-serif;
+}
+
+.esp_esp {
+  margin: 2vh;
+  font-size: 100%;
+}
+
+.precio_esp {
+  margin: 2vh;
+  font-size: 120%;
 }
 
 .contain_img_esp {
-  width: 50%;
+  width: 20%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2571,33 +2608,39 @@ td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contain_deleteCarr {
   height: 100%;
   width: 20%;
-  background-color: burlywood;
+  background-color: transparent;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .deleteCarr {
-  border: 1px solid black;
-  font-size: 4vh;
-}
-
-.especificaciones {
-  margin: 2vh;
-  text-align: center;
+  border: 1px solid #424141;
+  border-radius: 50%;
+  background-color: #d3cfc8;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  font-size: 3vh;
 }
 
 .imagenPagCarr {
   -webkit-box-shadow: 2px 2px 2px;
           box-shadow: 2px 2px 2px;
-  width: 40%;
-  height: 50%;
+  width: 120px;
+  height: 100px;
 }
 
 .nombre_esp {
