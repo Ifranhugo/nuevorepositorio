@@ -2512,11 +2512,11 @@ td {
   display: -ms-grid;
   display: grid;
   background-color: #f4f4f4;
-  -ms-grid-rows: 15vh 110vh 60vh 70vh;
-      grid-template-rows: 15vh 110vh 60vh 70vh;
+  -ms-grid-rows: 15vh 110vh 60vh 90vh;
+      grid-template-rows: 15vh 110vh 60vh 90vh;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "separador   separador" "tablaCarrito   TotalCompra" "suma_de_precios   suma_de_precios" "footer    footer";
+      grid-template-areas: "separador   separador" "tablaCarrito TotalCompra " "suma_de_precios   suma_de_precios" "footer    footer";
 }
 
 .separador {
@@ -2526,15 +2526,33 @@ td {
   grid-area: separador;
 }
 
+.TotalCompra {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: TotalCompra;
+}
+
 .tablaCarrito {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: tablaCarrito;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-y: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border: 1px solid black;
-}
-
-.TotalCompra {
-  border: 1px solid violet;
 }
 
 .suma_de_precios {
@@ -2546,10 +2564,11 @@ td {
 }
 
 .container_carrito {
-  height: 27%;
+  height: 30vh;
   width: 85%;
-  margin: auto;
-  border: 1px solid black;
+  margin: 2vh;
+  -webkit-box-shadow: 2px 2px 2px 2px #726e6e;
+          box-shadow: 2px 2px 2px 2px #726e6e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2576,12 +2595,11 @@ td {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: start;
-  border: 1px solid rebeccapurple;
 }
 
 .nombre_esp {
   margin: 2px;
-  font-size: 135%;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -2639,14 +2657,8 @@ td {
 .imagenPagCarr {
   -webkit-box-shadow: 2px 2px 2px;
           box-shadow: 2px 2px 2px;
-  width: 120px;
-  height: 100px;
-}
-
-.nombre_esp {
-  font-size: 3vh;
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 150px;
+  height: 140px;
 }
 
 .titleCarrito {
@@ -2672,6 +2684,29 @@ td {
 
 .td_buttom {
   width: 1vh;
+}
+
+.container_carrito_principal {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid blue;
+  overflow-y: auto;
+}
+
+.container_carrito_cambio {
+  display: none;
 }
 
 .seccionCar {

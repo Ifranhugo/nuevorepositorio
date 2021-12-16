@@ -160,8 +160,23 @@ export function menuFloar() {
 //ACCESORIOS
 export function CargarProduct() {
   let dat = !!document.querySelector(".body_productAcce");
+  let pagina;
+  if (dat == true) {
+    pagina = 1;
+  } else if (dat == false) {
+    dat = !!document.querySelector(".body_productProduct");
+    if (dat == true) {
+      pagina = 2;
+    } else if (dat == false) {
+      dat = !!document.querySelector(".body_carr");
+      if (dat == true) {
+        pagina = 3;
+      }
+    }
+  }
+
   console.log(dat);
-  if (dat === true) {
+  if (pagina == 1) {
     let carrito = [];
     let insertProduct = document.querySelector(".insertProduct");
     fetch("./produc_accesorios.json")
@@ -359,7 +374,7 @@ export function CargarProduct() {
         });
       });
     //---------------------------------------------------------------------------------------------
-  } else if (dat == false) {
+  } else if (pagina === 2) {
     let carrito = [];
 
     let insertProduct = document.querySelector(".insertProduct");
@@ -556,8 +571,69 @@ export function CargarProduct() {
           }
         });
       });
+  } else if (pagina == 3) {
+    let storage = [];
+    storage = JSON.parse(localStorage.getItem("carrito"));
+    if (storage === null) {
+      console.log("no hay nada");
+    } else {
+      console.log(storage[0].precio);
+      let sumaIDen = 0;
+      storage[sumaIDen];
+      let i = 0;
+      iterarProduct();
+    }
+    function iterarProduct() {
+      let storage = [];
+      storage = JSON.parse(localStorage.getItem("carrito"));
+      let tablaCarrito = document.querySelector(".tablaCarrito");
+      const div = document.createElement("div");
+      div.classList.add("container_carrito_principal");
+      storage.forEach((producto) => {
+        const content = `   
+          <div class="container_carrito">
+      <div class="contain_img_esp">
+        <img class="imagenPagCarr" src="${producto.imag}" alt="">
+      </div>
+      <div class="especificaciones">
+        <h3 class="nombre_esp">${producto.title}</h3>
+        <h4 class="esp_esp">especificaciones</h4>
+        <p class="precio_esp">${producto.precio}</p>
+      </div>
+      <div class="contain_deleteCarr">
+        <button class="deleteCarr" value="">X</button>
+      </div>
+    </div>`;
+        div.innerHTML += content;
+        tablaCarrito = document.querySelector(".tablaCarrito");
+        tablaCarrito.appendChild(div);
+        div
+          .querySelectorAll(".deleteCarr")
+          .addEventListener("click", removeItemCarrito);
+      });
+    }
+    /*     document.querySelectorAll(".deleteCarr").forEach((e) => {
+      e.addEventListener("click", () => {
+        console.log("hola");
+        removeItemCarrito();
+      });
+    }); */
+    function removeItemCarrito(e) {
+      const buttomDelete = e.target,
+        tr = buttomDelete.closest(".container_carrito"),
+        tituloRemove = tr.querySelector(".nombre_esp").textContent;
+      for (let ir = 0; ir < storage.length; ir++) {
+        console.log(storage[ir].title);
+        if (storage[ir].title.trim() === tituloRemove.trim()) {
+          /* storage.splice(ir, 0); */
+        }
+      }
+    }
+
+    let tablaCarrito = document.querySelector(".tablaCarrito");
+
+    localStorage.removeItem("productoNu");
   }
-  localStorage.removeItem("productoNu");
 }
 //-----------------------------------------------------------------------------------------------------
 
