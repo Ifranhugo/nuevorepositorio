@@ -2516,7 +2516,7 @@ td {
       grid-template-rows: 15vh 110vh 60vh 90vh;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "separador   separador" "tablaCarrito TotalCompra " "suma_de_precios   suma_de_precios" "footer    footer";
+      grid-template-areas: "separador   separador" "tablaCarrito tablaCarrito " "suma_de_precios   suma_de_precios" "footer    footer";
 }
 
 .separador {
@@ -2526,15 +2526,10 @@ td {
   grid-area: separador;
 }
 
-.TotalCompra {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: TotalCompra;
-}
-
 .tablaCarrito {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: tablaCarrito;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2546,13 +2541,13 @@ td {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border: 1px solid black;
 }
 
 .suma_de_precios {
@@ -2563,12 +2558,101 @@ td {
   background-color: #646464;
 }
 
+.contain_principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 98%;
+  width: 80%;
+  border: 1px solid red;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container_carr_segun {
+  border: 1px solid blue;
+  width: 70vh;
+  height: 100vh;
+}
+
+.sumatoriaCarr {
+  width: 55vh;
+  height: 45%;
+  border: 1px solid rebeccapurple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sumatoriaCarr ul {
+  border: 1px solid black;
+  height: 25vh;
+  width: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sumatoriaCarr ul li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid aqua;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sumatoriaCarr ul :nth-child(1) span {
+  font-size: 3vh;
+  color: #2b2828;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.sumatoriaCarr ul li span {
+  font-size: 2.5vh;
+  color: #2b2828;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .container_carrito {
-  height: 30vh;
-  width: 85%;
+  height: 25vh;
+  width: 38%;
   margin: 2vh;
-  -webkit-box-shadow: 2px 2px 2px 2px #726e6e;
-          box-shadow: 2px 2px 2px 2px #726e6e;
+  -webkit-box-shadow: 2px 2px 2px 2px #e7e2e2;
+          box-shadow: 2px 2px 2px 2px #e7e2e2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2654,6 +2738,13 @@ td {
   font-size: 3vh;
 }
 
+.container_PrinCam {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: -1000;
+}
+
 .imagenPagCarr {
   -webkit-box-shadow: 2px 2px 2px;
           box-shadow: 2px 2px 2px;
@@ -2707,6 +2798,51 @@ td {
 
 .container_carrito_cambio {
   display: none;
+}
+
+.noCarr {
+  width: 100%;
+  height: 80%;
+  display: none;
+}
+
+.noCarrCambio {
+  display: block;
+}
+
+.containNoCarr {
+  background-color: white;
+  border: 1px solid #a7a2a2;
+  border-radius: 10px 10px 10px 10px;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.containNoCarr h3 {
+  font-size: 130%;
+  color: #2b2828;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.containNoCarr p {
+  font-size: 110%;
+  color: #2b2828;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .seccionCar {

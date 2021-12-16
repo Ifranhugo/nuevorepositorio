@@ -513,7 +513,6 @@ export function CargarProduct() {
                 carrito.splice(ir, 1);
               }
             }
-
             const alertRE = document.getElementById("alertRemoveID");
             setTimeout(() => {
               alertRE.classList.remove("alertRemoveCambio");
@@ -574,8 +573,14 @@ export function CargarProduct() {
   } else if (pagina == 3) {
     let storage = [];
     storage = JSON.parse(localStorage.getItem("carrito"));
-    if (storage === null) {
-      console.log("no hay nada");
+    function noCarr() {
+      const noCarr = document.querySelector(".noCarr");
+      noCarr.classList.add("noCarrCambio");
+      console.log(noCarr);
+    }
+    console.log(storage);
+    if (storage.length == 0) {
+      noCarr();
     } else {
       console.log(storage[0].precio);
       let sumaIDen = 0;
@@ -586,11 +591,10 @@ export function CargarProduct() {
     function iterarProduct() {
       let storage = [];
       storage = JSON.parse(localStorage.getItem("carrito"));
-      let tablaCarrito = document.querySelector(".tablaCarrito");
       const div = document.createElement("div");
-      div.classList.add("container_carrito_principal");
-      storage.forEach((producto) => {
-        const content = `   
+      div.classList.add("container_carr_segun");
+      storage.map((producto) => {
+        let content = `   
           <div class="container_carrito">
       <div class="contain_img_esp">
         <img class="imagenPagCarr" src="${producto.imag}" alt="">
@@ -603,13 +607,14 @@ export function CargarProduct() {
       <div class="contain_deleteCarr">
         <button class="deleteCarr" value="">X</button>
       </div>
-    </div>`;
+ 
+    `;
         div.innerHTML += content;
-        tablaCarrito = document.querySelector(".tablaCarrito");
-        tablaCarrito.appendChild(div);
-        div
-          .querySelectorAll(".deleteCarr")
-          .addEventListener("click", removeItemCarrito);
+        contain_principal = document.querySelector(".contain_principal");
+        contain_principal.appendChild(div);
+        div.querySelectorAll(".deleteCarr").forEach((e) => {
+          e.addEventListener("click", removeItemCarrito);
+        });
       });
     }
     /*     document.querySelectorAll(".deleteCarr").forEach((e) => {
@@ -621,11 +626,28 @@ export function CargarProduct() {
     function removeItemCarrito(e) {
       const buttomDelete = e.target,
         tr = buttomDelete.closest(".container_carrito"),
+        container_carr_segun = document.querySelector(".container_carr_segun"),
         tituloRemove = tr.querySelector(".nombre_esp").textContent;
       for (let ir = 0; ir < storage.length; ir++) {
-        console.log(storage[ir].title);
+        let container_carrito = document.querySelector(".container_carrito");
         if (storage[ir].title.trim() === tituloRemove.trim()) {
-          /* storage.splice(ir, 0); */
+          storage.splice(ir, 1);
+          console.log(storage);
+          container_carr_segun.removeChild(container_carrito);
+          /*           list.removeChild(list.childNodes[0]); */
+        }
+        localStorage.setItem("carrito", JSON.stringify(storage));
+      }
+      if (storage.length == 0) {
+        console.log("Hola");
+        noCarr();
+        noCon();
+        function noCon() {
+          let container_carr_segun = document.querySelector(
+            ".container_carr_segun"
+          );
+          container_carr_segun.classList.add("container_PrinCam");
+          console.log(container_carr_segun);
         }
       }
     }
