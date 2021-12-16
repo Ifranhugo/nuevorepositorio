@@ -1,8 +1,5 @@
 .container_opciones_menu-1 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .menu_opciones_acce {
@@ -10,10 +7,7 @@
 }
 
 .container_opciones_menu_acce {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .title_menu_opciones {
@@ -26,13 +20,7 @@
 
 .categorias_opciones-2 {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   list-style: none;
-}
-/*# sourceMappingURL=accesorios.css.map */
+}/*# sourceMappingURL=accesorios.css.map */

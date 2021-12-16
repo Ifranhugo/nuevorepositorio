@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;EAC9B,kBAAkB,EAAE,qBAAqB;EACzC,mBAAmB,EACjB,qJAGiB;CACpB;;AACD,AAAA,sBAAsB,CAAC;EACrB,SAAS,EAAE,qBAAqB;CACjC;;AACD,AAAA,sBAAsB,CAAC;EACrB,SAAS,EAAE,qBAAqB;CACjC;;AACD,AAAA,qBAAqB,CAAC;EACpB,SAAS,EAAE,oBAAoB;CAChC;;AACD,AAAA,OAAO,CAAC;EACN,SAAS,EAAE,MAAM;CAClB",
-    "sources": [
-        "muestra_producto.scss"
-    ],
-    "names": [],
-    "file": "muestra_producto.css"
-}
+{"version":3,"sources":["muestra_producto.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,8BAAA;EACA,yCAAA;EACA,uKACE;AAAJ;;AAKA;EACE,gCAAA;AAFF;;AAIA;EACE,gCAAA;AADF;;AAGA;EACE,+BAAA;AAAF;;AAEA;EACE,iBAAA;AACF","file":"muestra_producto.css"}
