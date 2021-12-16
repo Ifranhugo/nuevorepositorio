@@ -1,12 +1,11 @@
 .body_carr {
   display: grid;
   background-color: #f4f4f4;
-  grid-template-rows: 15vh 110vh 60vh 90vh;
+  grid-template-rows: 15vh 110vh 80vh;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "separador   separador"
     "tablaCarrito tablaCarrito "
-    "suma_de_precios   suma_de_precios"
     "footer    footer";
 }
 .separador {
@@ -17,40 +16,38 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   align-items: center;
   justify-content: space-evenly;
-}
-.suma_de_precios {
-  grid-area: suma_de_precios;
-  background-color: #646464;
 }
 .contain_principal {
   display: flex;
   height: 98%;
   width: 80%;
-  border: 1px solid red;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
 }
 .container_carr_segun {
-  border: 1px solid blue;
-  width: 70vh;
+  width: 80vh;
   height: 100vh;
+  overflow-y: auto;
 }
 .sumatoriaCarr {
   width: 55vh;
+  margin-top: 2vh;
   height: 45%;
-  border: 1px solid rebeccapurple;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  vertical-align: baseline;
+  --vh-static: 6.25px;
+  /*  position: fixed; */
 }
 .sumatoriaCarr ul {
-  border: 1px solid black;
   height: 25vh;
   width: 40vh;
   display: flex;
@@ -75,11 +72,28 @@
   color: #2b2828;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+.CTerminarCompra {
+  margin-top: 2vh;
+  width: 100%;
+  text-align: center;
+  height: 20%;
+}
+.TerminarComCar {
+  width: 70%;
+  height: 90%;
+  border-radius: 10px 10px 10px 10px;
+  background-color: darkmagenta;
+  color: white;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .container_carrito {
   height: 25vh;
-  width: 38%;
+  width: 90%;
   margin: 2vh;
   box-shadow: 2px 2px 2px 2px rgb(231, 226, 226);
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -123,11 +137,12 @@
 }
 
 .deleteCarr {
-  border: 1px solid rgb(66, 65, 65);
-  border-radius: 50%;
-  background-color: rgb(211, 207, 200);
+  border: 1px solid #e5e5e5;
+  border-radius: 100%;
+  background-color: #f4f4f4;
   margin: auto;
   width: 40px;
+  font-family: "Roboto", sans-serif;
   height: 40px;
   font-size: 3vh;
 }
@@ -138,7 +153,6 @@
   z-index: -1000;
 }
 .imagenPagCarr {
-  box-shadow: 2px 2px 2px;
   width: 150px;
   height: 140px;
 }
@@ -157,9 +171,6 @@
   cursor: pointer;
   display: inline-block;
   font-weight: 900;
-}
-.table_carr td :nth-last-child() {
-  width: 2vh;
 }
 .td_buttom {
   width: 1vh;

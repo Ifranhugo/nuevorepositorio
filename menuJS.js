@@ -185,8 +185,7 @@ export function CargarProduct() {
         datos.forEach((producto) => {
           insertProduct.innerHTML += `
     <div class="foto_product  ${producto.id}" id="foto_productID">
-        <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
+          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">¿
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -373,7 +372,8 @@ export function CargarProduct() {
           }
         });
       });
-    //---------------------------------------------------------------------------------------------
+    localStorage.removeItem("productoNu");
+    // pagina de productos.html----------------------------------------------------------------------------
   } else if (pagina === 2) {
     let carrito = [];
 
@@ -385,8 +385,7 @@ export function CargarProduct() {
           insertProduct.innerHTML += `
         
     <div class="foto_product  ${producto.id}" id="foto_productID">
-        <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
+ <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -570,7 +569,9 @@ export function CargarProduct() {
           }
         });
       });
-  } else if (pagina == 3) {
+    localStorage.removeItem("productoNu");
+  } //pagina de Caritto-----------------------------------------------------------------
+  else if (pagina == 3) {
     let storage = [];
     storage = JSON.parse(localStorage.getItem("carrito"));
     function noCarr() {
@@ -578,9 +579,14 @@ export function CargarProduct() {
       noCarr.classList.add("noCarrCambio");
       console.log(noCarr);
     }
+    function noCon() {
+      let contain_principal = document.querySelector(".contain_principal");
+      contain_principal.classList.add("container_PrinCam");
+    }
     console.log(storage);
     if (storage.length == 0) {
       noCarr();
+      noCon();
     } else {
       console.log(storage[0].precio);
       let sumaIDen = 0;
@@ -588,41 +594,27 @@ export function CargarProduct() {
       let i = 0;
       iterarProduct();
     }
-    function iterarProduct() {
-      let storage = [];
-      storage = JSON.parse(localStorage.getItem("carrito"));
-      const div = document.createElement("div");
-      div.classList.add("container_carr_segun");
-      storage.map((producto) => {
-        let content = `   
-          <div class="container_carrito">
-      <div class="contain_img_esp">
-        <img class="imagenPagCarr" src="${producto.imag}" alt="">
-      </div>
-      <div class="especificaciones">
-        <h3 class="nombre_esp">${producto.title}</h3>
-        <h4 class="esp_esp">especificaciones</h4>
-        <p class="precio_esp">${producto.precio}</p>
-      </div>
-      <div class="contain_deleteCarr">
-        <button class="deleteCarr" value="">X</button>
-      </div>
- 
-    `;
-        div.innerHTML += content;
-        contain_principal = document.querySelector(".contain_principal");
-        contain_principal.appendChild(div);
-        div.querySelectorAll(".deleteCarr").forEach((e) => {
-          e.addEventListener("click", removeItemCarrito);
-        });
+    //Funcion para mostrar total de productos mas envio----------------------------------------
+    function TotalCarr(carrito) {
+      let Total = 0,
+        TotalEnvi = 0;
+      const itemCarTotal = document.querySelector(".TotalFin"),
+        envioFin = document.querySelector(".envioFin"),
+        TotalT = document.querySelector(".TotalT");
+      const PreEnvi = Number(
+        envioFin.textContent.replace("$", " ").replace(",", "")
+      );
+      carrito.forEach((item) => {
+        const PrecioCarr = Number(
+          item.precio.replace("$", " ").replace(",", "")
+        );
+        Total = Total + PrecioCarr * item.cantidad;
       });
-    }
-    /*     document.querySelectorAll(".deleteCarr").forEach((e) => {
-      e.addEventListener("click", () => {
-        console.log("hola");
-        removeItemCarrito();
-      });
-    }); */
+      TotalEnvi = TotalEnvi + Total + PreEnvi;
+      console.log(PreEnvi);
+      TotalT.innerHTML = `$ ${TotalEnvi}`;
+      itemCarTotal.innerHTML = ` $${Total}`;
+    } //funcion para remover del carrito-------------------------------------
     function removeItemCarrito(e) {
       const buttomDelete = e.target,
         tr = buttomDelete.closest(".container_carrito"),
@@ -634,6 +626,7 @@ export function CargarProduct() {
           storage.splice(ir, 1);
           console.log(storage);
           container_carr_segun.removeChild(container_carrito);
+          TotalCarr(storage);
           /*           list.removeChild(list.childNodes[0]); */
         }
         localStorage.setItem("carrito", JSON.stringify(storage));
@@ -642,23 +635,91 @@ export function CargarProduct() {
         console.log("Hola");
         noCarr();
         noCon();
-        function noCon() {
-          let container_carr_segun = document.querySelector(
-            ".container_carr_segun"
-          );
-          container_carr_segun.classList.add("container_PrinCam");
-          console.log(container_carr_segun);
-        }
       }
     }
 
-    let tablaCarrito = document.querySelector(".tablaCarrito");
+    //funcion para sumar cantidad----------------
+    function SumaCantidad(e) {
+      const Suma = e.target;
+      const tr = Suma.closest(".container_carrito");
+      const titlee = tr.querySelector(".nombre_esp").textContent;
+      storage.forEach((item) => {
+        if (item.title.trim() === titlee.trim()) {
+          Suma.value < 1 ? (Suma.value = 1) : Suma.value;
+          item.cantidad = Suma.value;
+          console.log("holaaa");
+        }
+        TotalCarr(storage);
+        localStorage.setItem("carrito", JSON.stringify(storage));
+      });
+    }
+    function iterarProduct() {
+      let storage = [],
+        contador = 0;
+      storage = JSON.parse(localStorage.getItem("carrito"));
+      const div = document.createElement("div");
+      div.classList.add("container_carr_segun");
+      const divSuma = document.createElement("div");
+      divSuma.classList.add("sumatoriaCarr");
 
-    localStorage.removeItem("productoNu");
+      storage.map((producto) => {
+        contador++;
+        let content = `   
+          <div class="container_carrito">
+      <div class="contain_img_esp">
+        <img class="imagenPagCarr" src="${producto.imag}" alt="">
+      </div>
+      <div class="especificaciones">
+        <h3 class="nombre_esp">${producto.title}</h3>
+        <p class="precio_esp">${producto.precio}</p>
+        <input type="number"  min ="1" class= "input_carr" value=${producto.cantidad}>
+      </div>
+      <div class="contain_deleteCarr">
+        <button class="deleteCarr" value="">x</button>
+      </div>
+ 
+    `;
+        let contentSuma = `
+      <ul>
+        <li>
+          <span>${contador} productos</span>
+          <span class="TotalFin">$ </span>
+        </li>
+        <li>
+          <span>envio</span>
+          <span class="envioFin">$ 200</span>
+        </li>
+        <li>
+          <span>Total</span>
+          <span class="TotalT"></span>
+        </li>
+      </ul>
+      <div class="CTerminarCompra">
+        <button class="TerminarComCar" value="">
+          Finalizar Compra
+        </button>
+      </div>`;
+        div.innerHTML += content;
+        let contain_principal = document.querySelector(".contain_principal");
+        contain_principal.appendChild(div);
+        div.querySelectorAll(".deleteCarr").forEach((e) => {
+          e.addEventListener("click", removeItemCarrito);
+        });
+        div.querySelectorAll(".input_carr").forEach((e) => {
+          e.addEventListener("change", SumaCantidad);
+        });
+
+        divSuma.innerHTML = contentSuma;
+        contain_principal.appendChild(divSuma);
+        TotalCarr(storage);
+      });
+    }
+
+    let tablaCarrito = document.querySelector(".tablaCarrito");
   }
 }
 //-----------------------------------------------------------------------------------------------------
-
+//esta funcion lleva a la pagina muestra, pero por cuestion de tiempo no se llego tener interactividad con el carrito en la pagina y falto mejorar el codigo asi que saque el lingk de las fotos que llevaria a la pagina
 export function cargarMuestra(pagina, lcstrage) {
   let formu_infoID = document.getElementById("formu_infoID"),
     container__product_imgID = document.getElementById(
