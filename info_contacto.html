@@ -20,6 +20,9 @@
 
 <body class="body_formulario       " id="cambiarBody">
   <header>
+    <div id="containerCarga">
+      <div id="cargaPagina"></div>
+    </div>
 
     <section class="menu">
       <div class="logo">RAPSARVIA</div>
@@ -271,7 +274,12 @@
   </footer>
   <script src="info_contactos.js" defer></script>
 
-
+  <script>
+    window.onload = function () {
+      let contenedor = document.getElementById("containerCarga")
+      contenedor.style.visibility = "hidden"; contenedor.style.opacity = "0";
+    }
+  </script>
 </body>
 
 </html>

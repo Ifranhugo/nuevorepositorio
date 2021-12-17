@@ -8,7 +8,7 @@
 }
 
 #containerCarga {
-  background-color: turquoise;
+  background-color: #ccc;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -18,7 +18,7 @@
 
 #cargaPagina {
   border: 15px solid #ccc;
-  border-top-color: #f4266a;
+  border-top-color: var(--rosa-fuerte);
   border-top-style: groove;
   border-radius: 100%;
   width: 100px;
@@ -29,8 +29,27 @@
   right: 0;
   bottom: 0;
   margin: auto;
+  -webkit-animation: girar 1s linear infinite;
+  animation: girar 1s linear infinite;
 }
 
+@-webkit-keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 a {
   text-decoration: none;
 }
