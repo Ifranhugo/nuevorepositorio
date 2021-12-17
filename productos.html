@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="./Sass_pro/scss/practica.css">
   <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
   <link rel="icon" href="./Diseñologo.png">
-
   <script src="https://kit.fontawesome.com/67b1745821.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
@@ -118,7 +117,14 @@
       </div>
     </div>
   </div>
+
   <script src="producto.js" type="module"></script>
+  <script>
+    window.onload = function () {
+      let contenedor = document.getElementById("containerCarga")
+      contenedor.style.visibility = "hidden"; contenedor.style.opacity = "0";
+    }
+  </script>
 </body>
 
 </html>

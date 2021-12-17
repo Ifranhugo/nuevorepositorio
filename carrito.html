@@ -30,6 +30,9 @@
 
 
 <body class="body_carr" id="body_carrID">
+  <div id="containerCarga">
+    <div id="cargaPagina"></div>
+  </div>
   <header id="header">
   </header>
   <div class="separador">
@@ -40,6 +43,32 @@
 
     <h3 class="titleCarrito">Carrito de compras</h3>
     <div class="contain_principal">
+
+      <div class="sumatoriaCarr">
+        <ul>
+          <li><span>
+              4 productos
+            </span><span>
+              $ 49.000,00
+            </span></li>
+          <li><span>
+              envio
+            </span><span>
+              $ 200,00
+            </span></li>
+          <li><span>
+              envio
+            </span><span>
+              $ 200,00
+            </span></li>
+          <li><span>
+              Total
+            </span><span>
+              $ 49.000,00
+            </span></li>
+        </ul>
+
+      </div>
     </div>
     <div class="noCarr">
       <div class="containNoCarr">
@@ -83,6 +112,12 @@
 
   </footer>
   <script src="./carrito.js" type="module"></script>
+  <script>
+    window.onload = function () {
+      let contenedor = document.getElementById("containerCarga")
+      contenedor.style.visibility = "hidden"; contenedor.style.opacity = "0";
+    }
+  </script>
 </body>
 
 </html>
