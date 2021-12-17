@@ -179,7 +179,7 @@ export function CargarProduct() {
       .then((datos) => {
         datos.forEach((producto) => {
           insertProduct.innerHTML += `
-    <div class="foto_product  ${producto.id}" id="foto_productID">
+    <div class="foto_product  ${producto.id}" id="foto_productID"  data-aos="fade-up">
           <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
@@ -379,7 +379,7 @@ export function CargarProduct() {
         datos.forEach((producto) => {
           insertProduct.innerHTML += `
         
-    <div class="foto_product  ${producto.id}" id="foto_productID">
+    <div class="foto_product  ${producto.id}" id="foto_productID"  data-aos="fade-up">
  <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>

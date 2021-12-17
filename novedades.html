@@ -14,9 +14,10 @@
     rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://kit.fontawesome.com/67b1745821.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./Sass_pro/scss/practica.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title>pagina</title>
 </head>
@@ -51,10 +52,10 @@
 
   </div>
 
-  <section class="ropa-negra">
+  <section class="ropa-negra" data-aos="fade-up-right">
 
   </section>
-  <section class="ropa-negra-text">
+  <section class="ropa-negra-text" data-aos="fade-left">
     <div class="contain-text-negra">
       <h3 class="h3-text-negra">Nombre del producto</h3>
       <p class="p-text-negra">aca conlleva informacion del producto lleloae</p>
@@ -66,11 +67,11 @@
   <section class="foto_section-2">
 
   </section>
-  <section class="ropa-colores">
+  <section class="ropa-colores" data-aos="fade-left">
 
   </section>
 
-  <section class="ropa-colores-text">
+  <section class="ropa-colores-text" data-aos="fade-up-right">
     <div class="contain-text-negra">
       <h3 class="h3-text-negra">Nombre del producto</h3>
       <p class="p-text-negra">aca conlleva informacion del producto lleloae</p>
@@ -78,10 +79,10 @@
     </div>
   </section>
   </section>
-  <section class="img__separatoria-3">
+  <section class="img__separatoria-3" data-aos="fade-up">
 
   </section>
-  <section class="img__product-3">
+  <section class="img__product-3" data-aos="fade-up">
     <section class="container-product ">
       <div class="foto_product-1">
         <img class="foto-galeria-1" src="./imagen-productos/galeria6.jpg" alt="">
@@ -148,13 +149,18 @@
     </div>
 
   </footer>
-  <script src="index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+  </script>
   <script>
     window.onload = function () {
       let contenedor = document.getElementById("containerCarga")
       contenedor.style.visibility = "hidden"; contenedor.style.opacity = "0";
     }
   </script>
+
 </body>
 
 </html>
