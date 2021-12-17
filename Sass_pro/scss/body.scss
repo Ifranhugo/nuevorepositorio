@@ -7,7 +7,30 @@
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
 }
-
+#containerCarga {
+  background-color: turquoise;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 5000;
+}
+#cargaPagina {
+  border: 15px solid #ccc;
+  border-top-color: #f4266a;
+  border-top-style: groove;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
 a {
   text-decoration: none;
 }
