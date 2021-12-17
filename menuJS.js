@@ -6,13 +6,8 @@ var sectionMenu = `        <section class="menu">
           <li><a href="novedades.html"> <span class="off">NOVEDADES</span></a></li>
           <li><a href="productos.html" class="productos"><span class="off"> PRODUCTOS</span></a></li>
           <li class="off-1"><a href="accesorios.html"><span class="off-1"> ACCESORIOS</span></a></li>
-          <li><button class="button_carrr" id="button_carrrID"><i class="fas fa-shopping-bag "></i></li></button>
-          <li><svg class="lupa" width="25" height="21" viewBox="0 0 65 61" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.4061 0.5C11.7233 0.5 0.628906 10.9418 0.628906 23.8198C0.628906 36.6978 11.7233 47.1395 25.4062 47.1395C30.6678 47.1395 35.5474 45.5949 39.5584 42.9639L39.5613 42.9611L57.9372 60.2562C58.2782 60.5771 58.8205 60.5854 59.1703 60.2562L64.1229 55.595C64.4639 55.274 64.4464 54.7418 64.12 54.4345L45.7467 37.1422C48.5422 33.3644 50.1834 28.7717 50.1834 23.8198C50.1834 10.9418 39.089 0.5 25.4061 0.5ZM25.4061 41.6525C14.9413 41.6525 6.45877 33.6689 6.45877 23.8198C6.45877 13.9706 14.9414 5.98702 25.4061 5.98702C35.8708 5.98702 44.3534 13.9706 44.3534 23.8198C44.3534 33.6689 35.8709 41.6525 25.4061 41.6525Z"
-                fill="black" />
-            </svg></li>
+          <li><button class="button_carrr" id="button_carrrID"><i class="fas fa-shopping-bag "></i></button></li>
+          <li><button class="button_busc"><i class="fas fa-search"></i></button></li>
         </ul>
       </section>
     </section>`,
@@ -160,18 +155,32 @@ export function menuFloar() {
 //ACCESORIOS
 export function CargarProduct() {
   let dat = !!document.querySelector(".body_productAcce");
+  let pagina;
+  if (dat == true) {
+    pagina = 1;
+  } else if (dat == false) {
+    dat = !!document.querySelector(".body_productProduct");
+    if (dat == true) {
+      pagina = 2;
+    } else if (dat == false) {
+      dat = !!document.querySelector(".body_carr");
+      if (dat == true) {
+        pagina = 3;
+      }
+    }
+  }
+
   console.log(dat);
-  if (dat === true) {
+  if (pagina == 1) {
     let carrito = [];
     let insertProduct = document.querySelector(".insertProduct");
-    fetch("produc_accesorios.json")
+    fetch("./produc_accesorios.json")
       .then((res) => res.json())
       .then((datos) => {
         datos.forEach((producto) => {
           insertProduct.innerHTML += `
     <div class="foto_product  ${producto.id}" id="foto_productID">
-        <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
+          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -358,9 +367,11 @@ export function CargarProduct() {
           }
         });
       });
-    //---------------------------------------------------------------------------------------------
-  } else if (dat == false) {
+    localStorage.removeItem("productoNu");
+    // pagina de productos.html----------------------------------------------------------------------------
+  } else if (pagina === 2) {
     let carrito = [];
+
     let insertProduct = document.querySelector(".insertProduct");
     fetch("datosJson.json")
       .then((res) => res.json())
@@ -369,8 +380,7 @@ export function CargarProduct() {
           insertProduct.innerHTML += `
         
     <div class="foto_product  ${producto.id}" id="foto_productID">
-        <a href="./muestra_producto.html">
-          <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt=""></a>
+ <img class="foto-galeria-1 a_fotogalery" src="./${producto.img1}" alt="">
         <div class="carrto__comprar" id="carrto__comprarID"><button class="buttom__galery" id="buttom__galeryID">agregar
             al carrtito<i class="fas fa-shopping-cart carrLog" _mstvisible="2"></i></button></div>
         <div class="info-galeria">
@@ -497,7 +507,6 @@ export function CargarProduct() {
                 carrito.splice(ir, 1);
               }
             }
-
             const alertRE = document.getElementById("alertRemoveID");
             setTimeout(() => {
               alertRE.classList.remove("alertRemoveCambio");
@@ -516,8 +525,6 @@ export function CargarProduct() {
                 Suma.value < 1 ? (Suma.value = 1) : Suma.value;
                 item.cantidad = Suma.value;
                 TotalCarr();
-              } else {
-                console.log("no entro");
               }
             });
           }
@@ -531,35 +538,183 @@ export function CargarProduct() {
               const newElemen = {
                 precioP: idProduct,
               };
-              document.addEventListener("DOMContentLoaded", () => {
-                localStorage.removeItem("productoNu");
-              });
+
               console.log(Object.entries(newElemen));
               localStorage.setItem(
                 "productoNu",
                 JSON.stringify(Object.entries(newElemen))
               );
             }
-            const asincronaFuncion = async () => {
-              try {
-                const storage = JSON.parse(localStorage.getItem("carrito"));
-                if (storage) {
-                  carrito = storage;
-                  await renderCarrito();
-                }
-              } catch (error) {
-                console.error("error carr");
-              }
-            };
-            window.onload = asincronaFuncion();
           });
+          localStorage.removeItem("productoNu");
+          const asincronaFuncion = async () => {
+            try {
+              const storage = JSON.parse(localStorage.getItem("carrito"));
+              if (storage) {
+                carrito = storage;
+                await renderCarrito();
+              }
+            } catch (error) {
+              console.error("error carr");
+            }
+          };
+          window.onload = asincronaFuncion();
+          function addlocalStorage() {
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+          }
         });
       });
+    localStorage.removeItem("productoNu");
+  } //pagina de Caritto-----------------------------------------------------------------
+  else if (pagina == 3) {
+    let storage = [];
+    storage = JSON.parse(localStorage.getItem("carrito"));
+    function noCarr() {
+      const noCarr = document.querySelector(".noCarr");
+      noCarr.classList.add("noCarrCambio");
+      console.log(noCarr);
+    }
+    function noCon() {
+      let contain_principal = document.querySelector(".contain_principal");
+      contain_principal.classList.add("container_PrinCam");
+    }
+    console.log(storage);
+    if (storage.length == 0) {
+      noCarr();
+      noCon();
+    } else {
+      console.log(storage[0].precio);
+      let sumaIDen = 0;
+      storage[sumaIDen];
+      let i = 0;
+      iterarProduct();
+    }
+    //Funcion para mostrar total de productos mas envio----------------------------------------
+    function TotalCarr(carrito) {
+      let Total = 0,
+        TotalEnvi = 0;
+      const itemCarTotal = document.querySelector(".TotalFin"),
+        envioFin = document.querySelector(".envioFin"),
+        TotalT = document.querySelector(".TotalT");
+      const PreEnvi = Number(
+        envioFin.textContent.replace("$", " ").replace(",", "")
+      );
+      carrito.forEach((item) => {
+        const PrecioCarr = Number(
+          item.precio.replace("$", " ").replace(",", "")
+        );
+        Total = Total + PrecioCarr * item.cantidad;
+      });
+      TotalEnvi = TotalEnvi + Total + PreEnvi;
+      console.log(PreEnvi);
+      TotalT.innerHTML = `$ ${TotalEnvi}`;
+      itemCarTotal.innerHTML = ` $${Total}`;
+    } //funcion para remover del carrito-------------------------------------
+    function removeItemCarrito(e) {
+      const buttomDelete = e.target,
+        tr = buttomDelete.closest(".container_carrito"),
+        container_carr_segun = document.querySelector(".container_carr_segun"),
+        tituloRemove = tr.querySelector(".nombre_esp").textContent;
+      for (let ir = 0; ir < storage.length; ir++) {
+        let container_carrito = document.querySelector(".container_carrito");
+        if (storage[ir].title.trim() === tituloRemove.trim()) {
+          storage.splice(ir, 1);
+          console.log(storage);
+          container_carr_segun.removeChild(container_carrito);
+          TotalCarr(storage);
+          /*           list.removeChild(list.childNodes[0]); */
+        }
+        localStorage.setItem("carrito", JSON.stringify(storage));
+      }
+      if (storage.length == 0) {
+        console.log("Hola");
+        noCarr();
+        noCon();
+      }
+    }
+
+    //funcion para sumar cantidad----------------
+    function SumaCantidad(e) {
+      const Suma = e.target;
+      const tr = Suma.closest(".container_carrito");
+      const titlee = tr.querySelector(".nombre_esp").textContent;
+      storage.forEach((item) => {
+        if (item.title.trim() === titlee.trim()) {
+          Suma.value < 1 ? (Suma.value = 1) : Suma.value;
+          item.cantidad = Suma.value;
+          console.log("holaaa");
+        }
+        TotalCarr(storage);
+        localStorage.setItem("carrito", JSON.stringify(storage));
+      });
+    }
+    function iterarProduct() {
+      let storage = [],
+        contador = 0;
+      storage = JSON.parse(localStorage.getItem("carrito"));
+      const div = document.createElement("div");
+      div.classList.add("container_carr_segun");
+      const divSuma = document.createElement("div");
+      divSuma.classList.add("sumatoriaCarr");
+
+      storage.map((producto) => {
+        contador++;
+        let content = `   
+          <div class="container_carrito">
+      <div class="contain_img_esp">
+        <img class="imagenPagCarr" src="${producto.imag}" alt="">
+      </div>
+      <div class="especificaciones">
+        <h3 class="nombre_esp">${producto.title}</h3>
+        <p class="precio_esp">${producto.precio}</p>
+        <input type="number"  min ="1" class= "input_carr" value=${producto.cantidad}>
+      </div>
+      <div class="contain_deleteCarr">
+        <button class="deleteCarr" value="">x</button>
+      </div>
+ 
+    `;
+        let contentSuma = `
+      <ul>
+        <li>
+          <span>${contador} productos</span>
+          <span class="TotalFin">$ </span>
+        </li>
+        <li>
+          <span>envio</span>
+          <span class="envioFin">$ 200</span>
+        </li>
+        <li>
+          <span>Total</span>
+          <span class="TotalT"></span>
+        </li>
+      </ul>
+      <div class="CTerminarCompra">
+        <button class="TerminarComCar" value="">
+          Finalizar Compra
+        </button>
+      </div>`;
+        div.innerHTML += content;
+        let contain_principal = document.querySelector(".contain_principal");
+        contain_principal.appendChild(div);
+        div.querySelectorAll(".deleteCarr").forEach((e) => {
+          e.addEventListener("click", removeItemCarrito);
+        });
+        div.querySelectorAll(".input_carr").forEach((e) => {
+          e.addEventListener("change", SumaCantidad);
+        });
+
+        divSuma.innerHTML = contentSuma;
+        contain_principal.appendChild(divSuma);
+        TotalCarr(storage);
+      });
+    }
+
+    let tablaCarrito = document.querySelector(".tablaCarrito");
   }
-  localStorage.removeItem("productoNu");
 }
 //-----------------------------------------------------------------------------------------------------
-
+//esta funcion lleva a la pagina muestra, pero por cuestion de tiempo no se llego tener interactividad con el carrito en la pagina y falto mejorar el codigo asi que saque el lingk de las fotos que llevaria a la pagina
 export function cargarMuestra(pagina, lcstrage) {
   let formu_infoID = document.getElementById("formu_infoID"),
     container__product_imgID = document.getElementById(
