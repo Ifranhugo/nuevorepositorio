@@ -863,7 +863,7 @@ a {
 }
 
 .foto-galeria-1 {
-  width: 80%;
+  width: 70%;
   height: 60vh;
 }
 
@@ -1273,7 +1273,7 @@ a {
   overflow-x: hidden;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 130vh 200vh 180vh 180vh 250vh 150vh 80vh;
-  grid-template-areas: "separacion_novedad  separacion_novedad " "ropa-negra  ropa-negra-text" "foto_section-1   foto_section-2" "ropa-colores  ropa-colores-text" "img__separatoria-3   img__separatoria-3" "img__product-3  img__product-3" "footer  footer";
+  grid-template-areas: "separacion_novedad  separacion_novedad " "ropa-negra  ropa-negra-text" "foto_section-1   foto_section-2" "ropa-colores-text   ropa-colores " "img__separatoria-3   img__separatoria-3" "img__product-3  img__product-3" "footer  footer";
 }
 
 .separacion_novedad {
@@ -2017,7 +2017,7 @@ td {
 
 .container_carr_segun {
   width: 80vh;
-  height: 100vh;
+  height: 80vh;
   overflow-y: auto;
 }
 
@@ -2386,10 +2386,13 @@ th {
 .ButtonComCarr {
   background: transparent;
   border: 2px solid black;
+  padding: 5px;
+}
+
+.ButtonComCarr a {
   color: black;
   font-family: "Mulish", sans-serif;
   font-size: 2.5vh;
-  padding: 5px;
 }
 
 /* Large desktop */
